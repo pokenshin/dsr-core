@@ -26,7 +26,7 @@ public class Ser {
     private int forcaVontade;
     private int ira;
     private int poderMaximo;
-    //TODO: Dons (Modificadores0
+    //TODO: Dons (Modificadores)
     //TODO: Defeitos (Modificadores)
     private String[] estimulos;
     private Elemento[] elementos;
