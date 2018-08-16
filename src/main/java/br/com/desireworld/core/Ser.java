@@ -9,6 +9,9 @@ import br.com.desireworld.core.ser.acoes.Habilidade;
 import br.com.desireworld.core.ser.acoes.Tecnica;
 import br.com.desireworld.core.ser.atributos.Atributos;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Ser {
     private Identidade identidade;
     private Atributos atributos;
@@ -26,15 +29,40 @@ public class Ser {
     private int forcaVontade;
     private int ira;
     private int poderMaximo;
-    //TODO: Dons (Modificadores)
-    //TODO: Defeitos (Modificadores)
+    private Modificador[] dons;
+    private Modificador[] defeitos;
+
+    public Modificador[] getDons() {
+        return dons;
+    }
+
+    public void setDons(Modificador[] dons) {
+        this.dons = dons;
+    }
+
+    public Modificador[] getDefeitos() {
+        return defeitos;
+    }
+
+    public void setDefeitos(Modificador[] defeitos) {
+        this.defeitos = defeitos;
+    }
+
+    public Modificador[][] getModificadoresAtivos() {
+        return modificadoresAtivos;
+    }
+
+    public void setModificadoresAtivos(Modificador[][] modificadoresAtivos) {
+        this.modificadoresAtivos = modificadoresAtivos;
+    }
+
     private String[] estimulos;
     private Elemento[] elementos;
     private Experiencia experiencia;
     private Equipamento[] itensEquipados;
     private Item[] posses;
     private Elo elo;
-    //TODO: Modificadores ativos
+    private Modificador[] modificadoresAtivos[];
 
 
     public Ser(Identidade identidade, Atributos atributos, Energia[] energias, int especial, Deslocamento[] deslocamentos, Subatributos subatributos, Cerne cerne, Pericia[] pericias, Habilidade[] fugacidade, Habilidade[] habilidades, Arcanidade[] arcanidades, Tecnica[] tecnicas, Resposta resposta, int forcaVontade, int ira, int poderMaximo, String[] estimulos, Elemento[] elementos, Experiencia experiencia, Equipamento[] itensEquipados, Item[] posses, Elo elo) {
@@ -60,6 +88,19 @@ public class Ser {
         this.itensEquipados = itensEquipados;
         this.posses = posses;
         this.elo = elo;
+    }
+
+    public Ser(Identidade identidade, Atributos atributos, Pericia[] pericias, Habilidade[] habilidades, Arcanidade[] arcanidades, Tecnica[] tecnicas, Modificador[] dons, Modificador[] defeitos, Equipamento[] itensEquipados, Item[] posses) {
+        this.identidade = identidade;
+        this.atributos = atributos;
+        this.pericias = pericias;
+        this.habilidades = habilidades;
+        this.arcanidades = arcanidades;
+        this.tecnicas = tecnicas;
+        this.dons = dons;
+        this.defeitos = defeitos;
+        this.itensEquipados = itensEquipados;
+        this.posses = posses;
     }
 
     public Identidade getIdentidade() {
@@ -236,5 +277,32 @@ public class Ser {
 
     public void setElo(Elo elo) {
         this.elo = elo;
+    }
+
+    public void calcular(){
+        this.calculaEspecial();
+//        this.calculaDeslocamentos();
+//        this.criaListaPericias();
+//        this.criaListaHabilidades();
+//        this.criaListaArcnidades();
+//        this.calculaCansaco();
+//        this.calculaComportamento();
+//        this.calculaFe();
+//        this.calculaKarma();
+//        this.calculaSubatributos();
+//        this.calculaCerne();
+//        this.calculaIra();
+//        this.calculaForcaVontade();
+//        this.calculaPoderMaximo();
+//        this.calculaResposta();
+//        this.calculaFugacidade();
+//        this.calculaModificadoresAtivos();
+//        this.calculaMagnitude();
+//        this.calculaEnergias();
+//        this.calculaExperiencia();
+    }
+
+    public void calculaEspecial() {
+        List<Especie> especies = Arrays.asList(this.identidade.getEspecies());
     }
 }
