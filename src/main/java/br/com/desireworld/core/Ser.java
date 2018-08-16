@@ -9,8 +9,8 @@ import br.com.desireworld.core.ser.acoes.Habilidade;
 import br.com.desireworld.core.ser.acoes.Tecnica;
 import br.com.desireworld.core.ser.atributos.Atributos;
 
-import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Ser {
     private Identidade identidade;
@@ -31,6 +31,9 @@ public class Ser {
     private int poderMaximo;
     private Modificador[] dons;
     private Modificador[] defeitos;
+
+    public Ser() {
+    }
 
     public Modificador[] getDons() {
         return dons;
@@ -303,6 +306,12 @@ public class Ser {
     }
 
     public void calculaEspecial() {
-        List<Especie> especies = Arrays.asList(this.identidade.getEspecies());
+
+        List<Integer> especiais = this.identidade.getEspecies().stream()
+                .map(Especie::getEspecial)
+                .collect(Collectors.toList());
+        this.especial = especiais.stream()
+                .max(Integer::compare)
+                .get();
     }
 }

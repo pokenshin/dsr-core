@@ -2,21 +2,23 @@ package br.com.desireworld.core.ser;
 
 import br.com.desireworld.core.lugares.Origem;
 
+import java.util.List;
+
 public class Identidade {
     private String nome;
     private Origem origem;
     private int corpo;
-    private Especie[] especies;
-    private Classe[] classes;
+    private List<Especie> especies;
+    private List<Classe> classes;
     private Indole natureza;
     private Indole indole;
     private int magnitude;
-    private Rei[] reis;
+    private List<Rei> reis;
     private int ki;
     private int nivel;
     private int tempo;
 
-    public Identidade(String nome, Origem origem, int corpo, Especie[] especies, Classe[] classes, Indole natureza, Indole indole, int magnitude, Rei[] reis, int ki, int nivel, int tempo) {
+    public Identidade(String nome, Origem origem, int corpo, List<Especie> especies, List<Classe> classes, Indole natureza, Indole indole, int magnitude, List<Rei> reis, int ki, int nivel, int tempo) {
         this.nome = nome;
         this.origem = origem;
         this.corpo = corpo;
@@ -29,6 +31,10 @@ public class Identidade {
         this.ki = ki;
         this.nivel = nivel;
         this.tempo = tempo;
+    }
+
+    public Identidade() {
+
     }
 
     public String getNome() {
@@ -55,19 +61,19 @@ public class Identidade {
         this.corpo = corpo;
     }
 
-    public Especie[] getEspecies() {
+    public List<Especie> getEspecies() {
         return especies;
     }
 
-    public void setEspecies(Especie[] especies) {
+    public void setEspecies(List<Especie> especies) {
         this.especies = especies;
     }
 
-    public Classe[] getClasses() {
+    public List<Classe> getClasses() {
         return classes;
     }
 
-    public void setClasses(Classe[] classes) {
+    public void setClasses(List<Classe> classes) {
         this.classes = classes;
     }
 
@@ -95,11 +101,11 @@ public class Identidade {
         this.magnitude = magnitude;
     }
 
-    public Rei[] getReis() {
+    public List<Rei> getReis() {
         return reis;
     }
 
-    public void setReis(Rei[] reis) {
+    public void setReis(List<Rei> reis) {
         this.reis = reis;
     }
 

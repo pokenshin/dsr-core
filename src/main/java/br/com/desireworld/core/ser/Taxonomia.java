@@ -25,6 +25,10 @@ public class Taxonomia {
         this.subClassificacoes = subClassificacoes;
     }
 
+    public Taxonomia() {
+
+    }
+
     public int getId() {
         return id;
     }
