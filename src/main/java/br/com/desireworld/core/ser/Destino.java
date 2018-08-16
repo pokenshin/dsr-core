@@ -15,6 +15,14 @@ public class Destino {
         this.milagre = milagre;
     }
 
+    public Destino() {
+        this.desgraca = 0;
+        this.azar = 0;
+        this.acaso = 0;
+        this.sorte = 0;
+        this.milagre = 0;
+    }
+
     public int getDesgraca() {
         return desgraca;
     }

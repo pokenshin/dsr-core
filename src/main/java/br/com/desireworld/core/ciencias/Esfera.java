@@ -4,6 +4,11 @@ public class Esfera {
     private int id;
     private String nome;
 
+    public Esfera() {
+        this.id = 0;
+        this.nome = "";
+    }
+
     public int getId() {
         return id;
     }

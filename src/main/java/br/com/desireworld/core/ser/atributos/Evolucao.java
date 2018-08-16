@@ -15,6 +15,14 @@ public class Evolucao {
         this.chakraMag = chakraMag;
     }
 
+    public Evolucao() {
+        this.pontosAtuais = 0;
+        this.multiplicador = 0;
+        this.chakraAberto = false;
+        this.chakraNome = "";
+        this.chakraMag = 0;
+    }
+
     public int getPontosAtuais() {
         return pontosAtuais;
     }

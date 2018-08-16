@@ -21,6 +21,16 @@ public class Resposta {
         this.heroismo = heroismo;
     }
 
+    public Resposta() {
+        this.desespero = new ValorMag();
+        this.panico = new ValorMag();
+        this.medo = new ValorMag();
+        this.indiferenca = new ValorMag();
+        this.coragem = new ValorMag();
+        this.bravura = new ValorMag();
+        this.heroismo = new ValorMag();
+    }
+
     public ValorMag getDesespero() {
         return desespero;
     }

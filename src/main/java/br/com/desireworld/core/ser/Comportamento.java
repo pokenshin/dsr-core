@@ -17,6 +17,15 @@ public class Comportamento {
         this.concepcao = concepcao;
     }
 
+    public Comportamento() {
+        this.honra = 0;
+        this.moral = 0;
+        this.personalidade = 0;
+        this.apresentacao = 0;
+        this.percepcao = 0;
+        this.concepcao = 0;
+    }
+
     public int getHonra() {
         return honra;
     }

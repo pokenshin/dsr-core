@@ -23,6 +23,17 @@ public class Criatividade extends Atributo {
         this.bonusCP = bonusCP;
     }
 
+    public Criatividade() {
+        super();
+        this.singularidade = new ValorMag();
+        this.invencao = new ValorMag();
+        this.tutor = new ValorMag();
+        this.realidade = new ValorMag();
+        this.irrealidade = new ValorMag();
+        this.bonusMP = new ValorMag();
+        this.bonusCP = 0;
+    }
+
     public ValorMag getSingularidade() {
         return singularidade;
     }

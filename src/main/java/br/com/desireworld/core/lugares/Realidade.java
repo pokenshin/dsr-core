@@ -9,6 +9,11 @@ public class Realidade {
         this.nome = nome;
     }
 
+    public Realidade() {
+        this.id = 0;
+        this.nome = "";
+    }
+
     public int getId() {
         return id;
     }

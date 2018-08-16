@@ -4,71 +4,91 @@ import br.com.desireworld.core.ciencias.Elemento;
 import br.com.desireworld.core.itens.Equipamento;
 import br.com.desireworld.core.itens.Item;
 import br.com.desireworld.core.ser.*;
-import br.com.desireworld.core.ser.acoes.Arcanidade;
 import br.com.desireworld.core.ser.acoes.Habilidade;
 import br.com.desireworld.core.ser.acoes.Tecnica;
 import br.com.desireworld.core.ser.atributos.Atributos;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Ser {
     private Identidade identidade;
     private Atributos atributos;
-    private Energia[] energias;
+    private List<Energia> energias;
     private int especial;
-    private Deslocamento[] deslocamentos;
+    private List<Deslocamento> deslocamentos;
     private Subatributos subatributos;
     private Cerne cerne;
-    private Pericia[] pericias;
-    private Habilidade[] fugacidade;
-    private Habilidade[] habilidades;
-    private Arcanidade[] arcanidades;
-    private Tecnica[] tecnicas;
+    private List<Pericia> pericias;
+    private List<Habilidade> fugacidade;
+    private List<Habilidade> habilidades;
+    private List<Habilidade> arcanidades;
+    private List<Tecnica> tecnicas;
     private Resposta resposta;
     private int forcaVontade;
     private int ira;
     private int poderMaximo;
-    private Modificador[] dons;
-    private Modificador[] defeitos;
+    private List<Modificador> dons;
+    private List<Modificador> defeitos;
+    private List<String> estimulos;
+    private List<Elemento> elementos;
+    private Experiencia experiencia;
+    private List<Equipamento> itensEquipados;
+    private List<Item> posses;
+    private Elo elo;
+    private List<Modificador> modificadoresAtivos;
 
     public Ser() {
+        this.identidade = new Identidade();
+        this.atributos = new Atributos();
+        this.energias = new ArrayList<>();
+        this.especial = 0;
+        this.deslocamentos = new ArrayList<>();
+        this.subatributos = new Subatributos();
+        this.cerne = new Cerne();
+        this.pericias = new ArrayList<>();
+        this.fugacidade = new ArrayList<>();
+        this.habilidades = new ArrayList<>();
+        this.arcanidades = new ArrayList<>();
+        this.tecnicas = new ArrayList<>();
+        this.resposta = new Resposta();
+        this.forcaVontade = 0;
+        this.ira = 0;
+        this.poderMaximo = 0;
+        this.estimulos = new ArrayList<>();
+        this.elementos = new ArrayList<>();
+        this.experiencia = new Experiencia();
+        this.itensEquipados = new ArrayList<>();
+        this.posses = new ArrayList<>();
+        this.elo = new Elo();
     }
 
-    public Modificador[] getDons() {
+    public List<Modificador> getDons() {
         return dons;
     }
 
-    public void setDons(Modificador[] dons) {
+    public void setDons(List<Modificador> dons) {
         this.dons = dons;
     }
 
-    public Modificador[] getDefeitos() {
+    public List<Modificador> getDefeitos() {
         return defeitos;
     }
 
-    public void setDefeitos(Modificador[] defeitos) {
+    public void setDefeitos(List<Modificador> defeitos) {
         this.defeitos = defeitos;
     }
 
-    public Modificador[][] getModificadoresAtivos() {
+    public List<Modificador> getModificadoresAtivos() {
         return modificadoresAtivos;
     }
 
-    public void setModificadoresAtivos(Modificador[][] modificadoresAtivos) {
+    public void setModificadoresAtivos(List<Modificador> modificadoresAtivos) {
         this.modificadoresAtivos = modificadoresAtivos;
     }
 
-    private String[] estimulos;
-    private Elemento[] elementos;
-    private Experiencia experiencia;
-    private Equipamento[] itensEquipados;
-    private Item[] posses;
-    private Elo elo;
-    private Modificador[] modificadoresAtivos[];
-
-
-    public Ser(Identidade identidade, Atributos atributos, Energia[] energias, int especial, Deslocamento[] deslocamentos, Subatributos subatributos, Cerne cerne, Pericia[] pericias, Habilidade[] fugacidade, Habilidade[] habilidades, Arcanidade[] arcanidades, Tecnica[] tecnicas, Resposta resposta, int forcaVontade, int ira, int poderMaximo, String[] estimulos, Elemento[] elementos, Experiencia experiencia, Equipamento[] itensEquipados, Item[] posses, Elo elo) {
+    public Ser(Identidade identidade, Atributos atributos, List<Energia> energias, int especial, List<Deslocamento> deslocamentos, Subatributos subatributos, Cerne cerne, List<Pericia> pericias, List<Habilidade> fugacidade, List<Habilidade> habilidades, List<Habilidade> arcanidades, List<Tecnica> tecnicas, Resposta resposta, int forcaVontade, int ira, int poderMaximo, List<String> estimulos, List<Elemento> elementos, Experiencia experiencia, List<Equipamento> itensEquipados, List<Item> posses, Elo elo) {
         this.identidade = identidade;
         this.atributos = atributos;
         this.energias = energias;
@@ -93,7 +113,7 @@ public class Ser {
         this.elo = elo;
     }
 
-    public Ser(Identidade identidade, Atributos atributos, Pericia[] pericias, Habilidade[] habilidades, Arcanidade[] arcanidades, Tecnica[] tecnicas, Modificador[] dons, Modificador[] defeitos, Equipamento[] itensEquipados, Item[] posses) {
+    public Ser(Identidade identidade, Atributos atributos, List<Pericia> pericias, List<Habilidade> habilidades, List<Habilidade> arcanidades, List<Tecnica> tecnicas, List<Modificador> dons, List<Modificador> defeitos, List<Equipamento> itensEquipados, List<Item> posses) {
         this.identidade = identidade;
         this.atributos = atributos;
         this.pericias = pericias;
@@ -122,11 +142,11 @@ public class Ser {
         this.atributos = atributos;
     }
 
-    public Energia[] getEnergias() {
+    public List<Energia> getEnergias() {
         return energias;
     }
 
-    public void setEnergias(Energia[] energias) {
+    public void setEnergias(List<Energia> energias) {
         this.energias = energias;
     }
 
@@ -138,11 +158,17 @@ public class Ser {
         this.especial = especial;
     }
 
-    public Deslocamento[] getDeslocamentos() {
+    public List<Deslocamento> getDeslocamentos() {
         return deslocamentos;
     }
 
-    public void setDeslocamentos(Deslocamento[] deslocamentos) {
+    public Deslocamento getDeslocamento(String tipo){
+        if (this.deslocamentos.size() > 0){
+            return deslocamentos.stream().filter(d -> d.getTipo() == tipo).collect(Collectors.toList()).get(0);
+        } else return null;
+    }
+
+    public void setDeslocamentos(List<Deslocamento> deslocamentos) {
         this.deslocamentos = deslocamentos;
     }
 
@@ -162,43 +188,43 @@ public class Ser {
         this.cerne = cerne;
     }
 
-    public Pericia[] getPericias() {
+    public List<Pericia> getPericias() {
         return pericias;
     }
 
-    public void setPericias(Pericia[] pericias) {
+    public void setPericias(List<Pericia> pericias) {
         this.pericias = pericias;
     }
 
-    public Habilidade[] getFugacidade() {
+    public List<Habilidade> getFugacidade() {
         return fugacidade;
     }
 
-    public void setFugacidade(Habilidade[] fugacidade) {
+    public void setFugacidade(List<Habilidade> fugacidade) {
         this.fugacidade = fugacidade;
     }
 
-    public Habilidade[] getHabilidades() {
+    public List<Habilidade> getHabilidades() {
         return habilidades;
     }
 
-    public void setHabilidades(Habilidade[] habilidades) {
+    public void setHabilidades(List<Habilidade> habilidades) {
         this.habilidades = habilidades;
     }
 
-    public Arcanidade[] getArcanidades() {
+    public List<Habilidade> getArcanidades() {
         return arcanidades;
     }
 
-    public void setArcanidades(Arcanidade[] arcanidades) {
+    public void setArcanidades(List<Habilidade> arcanidades) {
         this.arcanidades = arcanidades;
     }
 
-    public Tecnica[] getTecnicas() {
+    public List<Tecnica> getTecnicas() {
         return tecnicas;
     }
 
-    public void setTecnicas(Tecnica[] tecnicas) {
+    public void setTecnicas(List<Tecnica> tecnicas) {
         this.tecnicas = tecnicas;
     }
 
@@ -234,19 +260,19 @@ public class Ser {
         this.poderMaximo = poderMaximo;
     }
 
-    public String[] getEstimulos() {
+    public List<String> getEstimulos() {
         return estimulos;
     }
 
-    public void setEstimulos(String[] estimulos) {
+    public void setEstimulos(List<String> estimulos) {
         this.estimulos = estimulos;
     }
 
-    public Elemento[] getElementos() {
+    public List<Elemento> getElementos() {
         return elementos;
     }
 
-    public void setElementos(Elemento[] elementos) {
+    public void setElementos(List<Elemento> elementos) {
         this.elementos = elementos;
     }
 
@@ -258,19 +284,19 @@ public class Ser {
         this.experiencia = experiencia;
     }
 
-    public Equipamento[] getItensEquipados() {
+    public List<Equipamento> getItensEquipados() {
         return itensEquipados;
     }
 
-    public void setItensEquipados(Equipamento[] itensEquipados) {
+    public void setItensEquipados(List<Equipamento> itensEquipados) {
         this.itensEquipados = itensEquipados;
     }
 
-    public Item[] getPosses() {
+    public List<Item> getPosses() {
         return posses;
     }
 
-    public void setPosses(Item[] posses) {
+    public void setPosses(List<Item> posses) {
         this.posses = posses;
     }
 
@@ -314,4 +340,50 @@ public class Ser {
                 .max(Integer::compare)
                 .get();
     }
+
+//  DeslocamentoSolo = Minimo da Especie * (FatorDex + FatorFor) / 2
+//  DeslocamentoMar = (Minimo da Especie * (FatorDex + FatorFor)) / 4
+//  DeslocamentoAr = (Minimo da Especie * (FatorDex + FatorFor)) / 3
+//  DeslocamentoEspaco = Minimo da Especie * (FatorDex + FatorFor)
+    public void calculaDeslocamentos() {
+        int especieDexMin = this.identidade.getEspecies().get(0).getAtributos().getMin().getDestreza().getPontos();
+        int especieForMin = this.identidade.getEspecies().get(0).getAtributos().getMin().getForca().getPontos();
+        int serDex = this.atributos.getDestreza().getPontos();
+        int serFor = this.atributos.getForca().getPontos();
+        double fatorTotal = ((10 * serDex / especieDexMin) + (10 * serFor / especieForMin)) / 2;
+
+        this.calculaDeslocamentoSolo(fatorTotal);
+        this.calculaDeslocamentoMar();
+        this.calculaDeslocamentoAr();
+        this.calculaDeslocamentoEspaco();
+    }
+
+//  DeslocamentoEspaco = Minimo da Especie * (FatorDex + FatorFor)
+    private void calculaDeslocamentoEspaco() {
+
+    }
+
+//  DeslocamentoAr = (Minimo da Especie * (FatorDex + FatorFor)) / 3
+    private void calculaDeslocamentoAr() {
+
+    }
+
+//  DeslocamentoMar = (Minimo da Especie * (FatorDex + FatorFor)) / 4
+    private void calculaDeslocamentoMar() {
+    }
+
+//  DeslocamentoSolo = Minimo da Especie * (FatorDex + FatorFor) / 2
+    private void calculaDeslocamentoSolo(double fatorTotal) {
+        Deslocamento deslocamento = new Deslocamento(new ValorMag(), "Solo");
+        List<Deslocamento> desSoloEspecie = this.identidade.getEspecies().get(0).getDeslocamentosMedios().stream()
+                .filter(d -> d.getTipo() == "Solo")
+                .collect(Collectors.toList());
+        if (desSoloEspecie.size() > 0){
+            deslocamento.setValor(desSoloEspecie.get(0).getValor().multiply(new ValorMag(fatorTotal)));
+            deslocamento.setValor(deslocamento.getValor().divide(2));
+        }
+        this.deslocamentos.add(deslocamento);
+    }
+
+
 }

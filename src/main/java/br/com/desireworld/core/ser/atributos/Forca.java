@@ -20,6 +20,16 @@ public class Forca extends Atributo {
         this.bonusCP = bonusCP;
     }
 
+    public Forca() {
+        super();
+        this.potencia = new ValorMag();
+        this.golpe = new ValorMag();
+        this.dureza = new ValorMag();
+        this.vigor = new ValorMag();
+        this.sustentacao = new ValorMag();
+        this.bonusCP = 0;
+    }
+
     public ValorMag getPotencia() {
         return potencia;
     }

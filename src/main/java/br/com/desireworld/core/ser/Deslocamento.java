@@ -13,6 +13,12 @@ public class Deslocamento {
         this.unidade = "km/h";
     }
 
+    public Deslocamento() {
+        this.valor = new ValorMag();
+        this.tipo = "";
+        this.unidade = "km/h";
+    }
+
     public String toString(){
         return this.valor.toString() + " " + this.unidade;
     }

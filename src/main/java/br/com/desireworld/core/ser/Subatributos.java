@@ -31,6 +31,22 @@ public class Subatributos {
         this.bonusSP = bonusSP;
     }
 
+    public Subatributos() {
+        this.instinto = new ValorMag();
+        this.raciocinio = new ValorMag();
+        this.subconsciencia = new ValorMag();
+        this.autocontrole = new ValorMag();
+        this.anatomia = new ValorMag();
+        this.animo = new ValorMag();
+        this.movimento = new ValorMag();
+        this.precisao = new ValorMag();
+        this.bonusHP = new ValorMag();
+        this.bonusMP = new ValorMag();
+        this.bonusCP = new ValorMag();
+        this.bonusSP = new ValorMag();
+
+    }
+
     public ValorMag getInstinto() {
         return instinto;
     }

@@ -11,6 +11,7 @@ import br.com.desireworld.core.ser.acoes.Arcanidade;
 import br.com.desireworld.core.ser.acoes.Habilidade;
 import br.com.desireworld.core.ser.atributos.Atributos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Especie {
@@ -44,7 +45,7 @@ public class Especie {
     private Intervalo<Integer> turno;
     private Intervalo<ValorMag> altura;
     private Intervalo<ValorMag> maturidade;
-    private int doominancia; //Porcentagem de dominância vs outras especies
+    private int dominancia; //Porcentagem de dominância vs outras especies
     private Intervalo<Integer> destrias;
     private Intervalo<Integer> trabalho;
     private ValorMag densidade;
@@ -57,7 +58,7 @@ public class Especie {
     private List<Elemento> elementos;
     private List<String> estimulos;
 
-    public Especie(int id, Taxonomia taxonomia, Origem origem, Intervalo<Integer> magnitude, Intervalo<Integer> reis, Intervalo<Integer> ki, Intervalo<Integer> nivel, Intervalo<Integer> tempo, Esfera essencia, List<Energia> energias, Intervalo<Atributos> atributos, List<Pericia> pericias, List<Habilidade> habilidades, List<Arcanidade> arcanidades, String origemPoder, List<Modificador> virtudes, List<Modificador> defeitos, Intervalo<Integer> forcaVontade, Intervalo<Integer> ira, Intervalo<Integer> poderMaximo, int fatorProgressao, Intervalo<Integer> cansaco, Intervalo<Integer> fe, Intervalo<Integer> karma, int maxItensEquipados, int maxArmasEquipadas, Intervalo<Integer> acao, Intervalo<Integer> turno, Intervalo<ValorMag> altura, Intervalo<ValorMag> maturidade, int doominancia, Intervalo<Integer> destrias, Intervalo<Integer> trabalho, ValorMag densidade, Intervalo<ValorMag> largura, int especial, Comportamento comportamento, Intervalo<Resposta> resposta, List<Habilidade> fugacidade, List<Deslocamento> deslocamentosMedios, List<Elemento> elementos, List<String> estimulos) {
+    public Especie(int id, Taxonomia taxonomia, Origem origem, Intervalo<Integer> magnitude, Intervalo<Integer> reis, Intervalo<Integer> ki, Intervalo<Integer> nivel, Intervalo<Integer> tempo, Esfera essencia, List<Energia> energias, Intervalo<Atributos> atributos, List<Pericia> pericias, List<Habilidade> habilidades, List<Arcanidade> arcanidades, String origemPoder, List<Modificador> virtudes, List<Modificador> defeitos, Intervalo<Integer> forcaVontade, Intervalo<Integer> ira, Intervalo<Integer> poderMaximo, int fatorProgressao, Intervalo<Integer> cansaco, Intervalo<Integer> fe, Intervalo<Integer> karma, int maxItensEquipados, int maxArmasEquipadas, Intervalo<Integer> acao, Intervalo<Integer> turno, Intervalo<ValorMag> altura, Intervalo<ValorMag> maturidade, int dominancia, Intervalo<Integer> destrias, Intervalo<Integer> trabalho, ValorMag densidade, Intervalo<ValorMag> largura, int especial, Comportamento comportamento, Intervalo<Resposta> resposta, List<Habilidade> fugacidade, List<Deslocamento> deslocamentosMedios, List<Elemento> elementos, List<String> estimulos) {
         this.id = id;
         this.taxonomia = taxonomia;
         this.origem = origem;
@@ -88,7 +89,7 @@ public class Especie {
         this.turno = turno;
         this.altura = altura;
         this.maturidade = maturidade;
-        this.doominancia = doominancia;
+        this.dominancia = dominancia;
         this.destrias = destrias;
         this.trabalho = trabalho;
         this.densidade = densidade;
@@ -103,7 +104,48 @@ public class Especie {
     }
 
     public Especie() {
-
+        this.id = 0;
+        this.taxonomia = new Taxonomia();
+        this.origem = new Origem();
+        this.magnitude = new Intervalo<>(0, 0);
+        this.reis = new Intervalo<>(0, 0);
+        this.ki = new Intervalo<>(0, 0);
+        this.nivel = new Intervalo<>(0, 0);
+        this.tempo = new Intervalo<>(0, 0);
+        this.essencia = new Esfera();
+        this.energias = new ArrayList<>();
+        this.atributos = new Intervalo<>(new Atributos(), new Atributos());
+        this.pericias = new ArrayList<>();
+        this.habilidades = new ArrayList<>();
+        this.arcanidades = new ArrayList<>();
+        this.origemPoder = "";
+        this.virtudes = new ArrayList<>();
+        this.defeitos = new ArrayList<>();
+        this.forcaVontade = new Intervalo<>(0, 0);
+        this.ira = new Intervalo<>(0, 0);
+        this.poderMaximo = new Intervalo<>(0, 0);
+        this.fatorProgressao = 0;
+        this.cansaco = new Intervalo<>(0, 0);
+        this.fe = new Intervalo<>(0, 0);
+        this.karma = new Intervalo<>(0, 0);
+        this.maxItensEquipados = 0;
+        this.maxArmasEquipadas = 0;
+        this.acao = new Intervalo<>(0, 0);
+        this.turno = new Intervalo<>(0 ,0);
+        this.altura = new Intervalo<>(new ValorMag(), new ValorMag());
+        this.maturidade = new Intervalo<>(new ValorMag(), new ValorMag());
+        this.dominancia = 0;
+        this.destrias = new Intervalo<>(0, 0);
+        this.trabalho = new Intervalo<>(0, 0);
+        this.densidade = new ValorMag();
+        this.largura = new Intervalo<>(new ValorMag(), new ValorMag());
+        this.especial = 0;
+        this.comportamento = new Comportamento();
+        this.resposta = new Intervalo<>(new Resposta(), new Resposta());
+        this.fugacidade = new ArrayList<>();
+        this.deslocamentosMedios = new ArrayList<>();
+        this.elementos = new ArrayList<>();
+        this.estimulos = new ArrayList<>();
     }
 
     public int getId() {
@@ -347,12 +389,12 @@ public class Especie {
         this.maturidade = maturidade;
     }
 
-    public int getDoominancia() {
-        return doominancia;
+    public int getDominancia() {
+        return dominancia;
     }
 
-    public void setDoominancia(int doominancia) {
-        this.doominancia = doominancia;
+    public void setDominancia(int dominancia) {
+        this.dominancia = dominancia;
     }
 
     public Intervalo<Integer> getDestrias() {

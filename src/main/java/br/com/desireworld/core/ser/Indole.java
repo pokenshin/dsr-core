@@ -13,6 +13,13 @@ public class Indole {
         this.destino = destino;
     }
 
+    public Indole() {
+        this.id = 0;
+        this.nome = "";
+        this.carisma = new Carisma();
+        this.destino = new Destino();
+    }
+
     public int getId() {
         return id;
     }

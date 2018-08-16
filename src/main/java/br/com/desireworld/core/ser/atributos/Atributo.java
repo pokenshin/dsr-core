@@ -17,6 +17,14 @@ public abstract class Atributo {
         this.evolucao = evolucao;
     }
 
+    public Atributo() {
+        this.classe = "";
+        this.nivel = 0;
+        this.pontos = 0;
+        this.porcentagem = new ValorMag();
+        this.evolucao = new Evolucao();
+    }
+
     public String getClasse() {
         return classe;
     }

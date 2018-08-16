@@ -11,6 +11,12 @@ public class Carisma {
         this.positivo = positivo;
     }
 
+    public Carisma() {
+        this.negativo = 0;
+        this.neutro = 0;
+        this.positivo = 0;
+    }
+
     public int getNegativo() {
         return negativo;
     }

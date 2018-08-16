@@ -11,6 +11,12 @@ public class Plano {
         this.realidade = realidade;
     }
 
+    public Plano() {
+        this.id = 0;
+        this.nome = "";
+        this.realidade = new Realidade();
+    }
+
     public int getId() {
         return id;
     }

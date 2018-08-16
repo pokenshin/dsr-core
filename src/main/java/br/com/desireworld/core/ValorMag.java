@@ -81,11 +81,7 @@ public class ValorMag {
             }
         }else{
             //Se o numero decimal for maior que 10, descarta quebrados
-            if (numeroString.contains(",")){
-                numeroString = numeroString.split(",")[0];
-            } else{
-                numeroString = numeroString.split(".")[0];
-            }
+            numeroString = Integer.toString((int)numero);
             ValorMag result = new ValorMag(Integer.parseInt(numeroString));
             this.valor = result.getValor();
             this.mag = result.getMag();

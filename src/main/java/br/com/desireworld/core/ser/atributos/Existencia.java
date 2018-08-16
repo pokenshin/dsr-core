@@ -20,6 +20,16 @@ public class Existencia extends Atributo {
         this.bonusCP = bonusCP;
     }
 
+    public Existencia() {
+        super();
+        this.conhecimento = new ValorMag();
+        this.experiencia = new ValorMag();
+        this.ciencia = new ValorMag();
+        this.consciencia = new ValorMag();
+        this.memoria = new ValorMag();
+        this.bonusCP = 0;
+    }
+
     public ValorMag getConhecimento() {
         return conhecimento;
     }

@@ -20,6 +20,16 @@ public class Destreza extends Atributo {
         this.bonusCP = bonusCP;
     }
 
+    public Destreza() {
+        super();
+        this.reflexo = new ValorMag();
+        this.esquiva = new ValorMag();
+        this.ataque = new ValorMag();
+        this.coordenacao = new ValorMag();
+        this.iniciativa = new ValorMag();
+        this.bonusCP = 0;
+    }
+
     public ValorMag getReflexo() {
         return reflexo;
     }

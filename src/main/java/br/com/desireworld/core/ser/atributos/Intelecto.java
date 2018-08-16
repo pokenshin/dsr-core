@@ -2,7 +2,7 @@ package br.com.desireworld.core.ser.atributos;
 
 import br.com.desireworld.core.ValorMag;
 
-public class Intelecto {
+public class Intelecto extends Atributo {
     private ValorMag concentracao;
     private ValorMag visualizacao;
     private ValorMag aprendizagem;
@@ -10,13 +10,24 @@ public class Intelecto {
     private ValorMag eidos;
     private int bonusCP;
 
-    public Intelecto(ValorMag concentracao, ValorMag visualizacao, ValorMag aprendizagem, ValorMag senso, ValorMag eidos, int bonusCP) {
+    public Intelecto(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag concentracao, ValorMag visualizacao, ValorMag aprendizagem, ValorMag senso, ValorMag eidos, int bonusCP) {
+        super(classe, nivel, pontos, porcentagem, evolucao);
         this.concentracao = concentracao;
         this.visualizacao = visualizacao;
         this.aprendizagem = aprendizagem;
         this.senso = senso;
         this.eidos = eidos;
         this.bonusCP = bonusCP;
+    }
+
+    public Intelecto() {
+        super();
+        this.concentracao = new ValorMag();
+        this.visualizacao = new ValorMag();
+        this.aprendizagem = new ValorMag();
+        this.senso = new ValorMag();
+        this.eidos = new ValorMag();
+        this.bonusCP = 0;
     }
 
     public ValorMag getConcentracao() {

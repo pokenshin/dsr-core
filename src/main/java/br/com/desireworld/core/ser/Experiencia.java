@@ -11,6 +11,12 @@ public class Experiencia {
         this.experienciaAtual = experienciaAtual;
     }
 
+    public Experiencia() {
+        this.pontosGraduacao = 0;
+        this.pontosEvolucao = 0;
+        this.experienciaAtual = 0;
+    }
+
     public long getPontosGraduacao() {
         return pontosGraduacao;
     }

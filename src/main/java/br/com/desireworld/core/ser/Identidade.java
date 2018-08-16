@@ -2,6 +2,7 @@ package br.com.desireworld.core.ser;
 
 import br.com.desireworld.core.lugares.Origem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Identidade {
@@ -34,7 +35,18 @@ public class Identidade {
     }
 
     public Identidade() {
-
+        this.nome = "";
+        this.origem = new Origem();
+        this.corpo = 0;
+        this.especies = new ArrayList<>();
+        this.classes = new ArrayList<>();
+        this.natureza = new Indole();
+        this.indole = new Indole();
+        this.magnitude = 0;
+        this.reis = new ArrayList<>();
+        this.ki = 0;
+        this.nivel = 0;
+        this.tempo = 0;
     }
 
     public String getNome() {

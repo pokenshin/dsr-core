@@ -31,6 +31,21 @@ public class Cerne {
         this.essencia = essencia;
     }
 
+    public Cerne() {
+        this.iniciativa = new ValorMag();
+        this.acao = new ValorMag();
+        this.reacao = new ValorMag();
+        this.turno = new ValorMag();
+        this.destria = new ValorMag();
+        this.altura = new ValorMag();
+        this.largura = new ValorMag();
+        this.comprimento = new ValorMag();
+        this.carga = new ValorMag();
+        this.massa = new ValorMag();
+        this.tenacidade = new ValorMag();
+        this.essencia = new ValorMag();
+    }
+
     public ValorMag getIniciativa() {
         return iniciativa;
     }

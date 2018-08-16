@@ -1,5 +1,8 @@
 package br.com.desireworld.core.ser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Taxonomia {
     private int id;
     private String reino;
@@ -10,9 +13,9 @@ public class Taxonomia {
     private String genero;
     private String nomeCientifico;
     private String nomePopular;
-    private String[] subClassificacoes;
+    private List<String> subClassificacoes;
 
-    public Taxonomia(int id, String reino, String filo, String classe, String ordem, String familia, String genero, String nomeCientifico, String nomePopular, String[] subClassificacoes) {
+    public Taxonomia(int id, String reino, String filo, String classe, String ordem, String familia, String genero, String nomeCientifico, String nomePopular, List<String> subClassificacoes) {
         this.id = id;
         this.reino = reino;
         this.filo = filo;
@@ -26,7 +29,16 @@ public class Taxonomia {
     }
 
     public Taxonomia() {
-
+        this.id = 0;
+        this.reino = "";
+        this.filo = "";
+        this.classe = "";
+        this.ordem = "";
+        this.familia = "";
+        this.genero = "";
+        this.nomeCientifico = "";
+        this.nomePopular = "";
+        this.subClassificacoes = new ArrayList<>();
     }
 
     public int getId() {
@@ -101,11 +113,11 @@ public class Taxonomia {
         this.nomePopular = nomePopular;
     }
 
-    public String[] getSubClassificacoes() {
+    public List<String> getSubClassificacoes() {
         return subClassificacoes;
     }
 
-    public void setSubClassificacoes(String[] subClassificacoes) {
+    public void setSubClassificacoes(List<String> subClassificacoes) {
         this.subClassificacoes = subClassificacoes;
     }
 }

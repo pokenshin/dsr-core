@@ -11,6 +11,12 @@ public class Origem {
         this.plano = plano;
     }
 
+    public Origem() {
+        this.id = 0;
+        this.nome = "";
+        this.plano = new Plano();
+    }
+
     public int getId() {
         return id;
     }

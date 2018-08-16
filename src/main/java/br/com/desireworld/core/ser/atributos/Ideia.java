@@ -2,7 +2,7 @@ package br.com.desireworld.core.ser.atributos;
 
 import br.com.desireworld.core.ValorMag;
 
-public class Ideia {
+public class Ideia extends Atributo {
     private int ki;
     private int base;
     private ValorMag misterio;
@@ -11,7 +11,8 @@ public class Ideia {
     private ValorMag bonusMP;
     private int bonusCP;
 
-    public Ideia(int ki, int base, ValorMag misterio, ValorMag holismo, ValorMag nexo, ValorMag bonusMP, int bonusCP) {
+    public Ideia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, int ki, int base, ValorMag misterio, ValorMag holismo, ValorMag nexo, ValorMag bonusMP, int bonusCP) {
+        super(classe, nivel, pontos, porcentagem, evolucao);
         this.ki = ki;
         this.base = base;
         this.misterio = misterio;
@@ -19,6 +20,18 @@ public class Ideia {
         this.nexo = nexo;
         this.bonusMP = bonusMP;
         this.bonusCP = bonusCP;
+    }
+
+    public Ideia() {
+        super();
+        this.ki = 0;
+        this.base = 0;
+        this.misterio = new ValorMag();
+        this.holismo = new ValorMag();
+        this.nexo = new ValorMag();
+        this.bonusMP = new ValorMag();
+        this.bonusCP = 0;
+
     }
 
     public int getKi() {

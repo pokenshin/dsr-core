@@ -1,5 +1,8 @@
 package br.com.desireworld.core.ser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Elo {
     private int cansacoAtual;
     private int cansacoMax;
@@ -7,13 +10,13 @@ public class Elo {
     private int geracao;
     private int fe;
     private int karma;
-    private String[] alma;
+    private List<String> alma;
     private String eloDivino;
     private String trajetoria;
     private String idumentaria;
     private Comportamento comportamento;
 
-    public Elo(int cansacoAtual, int cansacoMax, int genese, int geracao, int fe, int karma, String[] alma, String eloDivino, String trajetoria, String idumentaria, Comportamento comportamento) {
+    public Elo(int cansacoAtual, int cansacoMax, int genese, int geracao, int fe, int karma, List<String> alma, String eloDivino, String trajetoria, String idumentaria, Comportamento comportamento) {
         this.cansacoAtual = cansacoAtual;
         this.cansacoMax = cansacoMax;
         this.genese = genese;
@@ -25,6 +28,20 @@ public class Elo {
         this.trajetoria = trajetoria;
         this.idumentaria = idumentaria;
         this.comportamento = comportamento;
+    }
+
+    public Elo() {
+        this.cansacoAtual = 0;
+        this.cansacoMax = 0;
+        this.genese = 0;
+        this.geracao = 0;
+        this.fe = 0;
+        this.karma = 0;
+        this.alma = new ArrayList<>();
+        this.eloDivino = "";
+        this.trajetoria = "";
+        this.idumentaria = "";
+        this.comportamento = new Comportamento();
     }
 
     public int getCansacoAtual() {
@@ -75,11 +92,11 @@ public class Elo {
         this.karma = karma;
     }
 
-    public String[] getAlma() {
+    public List<String> getAlma() {
         return alma;
     }
 
-    public void setAlma(String[] alma) {
+    public void setAlma(List<String> alma) {
         this.alma = alma;
     }
 

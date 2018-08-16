@@ -19,6 +19,16 @@ public class Atributos {
         this.ideia = ideia;
     }
 
+    public Atributos() {
+        this.forca = new Forca();
+        this.materia = new Materia();
+        this.destreza = new Destreza();
+        this.intelecto = new Intelecto();
+        this.criatividade = new Criatividade();
+        this.existencia = new Existencia();
+        this.ideia = new Ideia();
+    }
+
     public Forca getForca() {
         return forca;
     }
