@@ -4,6 +4,7 @@ import br.com.desireworld.core.ser.Classe;
 import br.com.desireworld.core.ser.Deslocamento;
 import br.com.desireworld.core.ser.Especie;
 import br.com.desireworld.core.ser.Pericia;
+import br.com.desireworld.core.ser.acoes.Habilidade;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -84,5 +85,17 @@ public class SerTest {
         this.ser.criaListaPericias();
         assertEquals(12, this.ser.getPericias().size());
 
+    }
+
+    @Test
+    public void criaListaHabilidades(){
+        for (int i = 0; i < 2 ; i++) {
+            this.ser.getIdentidade().getEspecies().add(new Especie());
+            for (int j = 0; j < 3 ; j++) {
+                this.ser.getIdentidade().getEspecies().get(i).getHabilidades().add(new Habilidade());
+            }
+        }
+        this.ser.criaListaHabilidades();
+        assertEquals(6, this.ser.getHabilidades().size());
     }
 }

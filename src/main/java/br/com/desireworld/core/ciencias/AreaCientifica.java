@@ -5,6 +5,13 @@ public class AreaCientifica {
     private String nome;
     private Ciencia ciencia;
 
+    public AreaCientifica() {
+        this.id = 0;
+        this.nome = "";
+        this.ciencia = new Ciencia();
+
+    }
+
     public int getId() {
         return id;
     }

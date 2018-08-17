@@ -3,7 +3,9 @@ package br.com.desireworld.core.ser.acoes;
 import br.com.desireworld.core.Efeito;
 import br.com.desireworld.core.ciencias.AreaCientifica;
 import br.com.desireworld.core.ser.Pericia;
-import br.com.desireworld.core.ser.acoes.TipoAcao;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Acao {
     private int id;
@@ -13,9 +15,9 @@ public abstract class Acao {
     private TipoAcao tipo;
     private Pericia pericia;
     private AreaCientifica areaCientifica;
-    private Efeito[] efeitos;
+    private List<Efeito> efeitos;
 
-    public Acao(int id, String nome, int magnitude, String caracteristicas, TipoAcao tipo, Pericia pericia, AreaCientifica areaCientifica, Efeito[] efeitos) {
+    public Acao(int id, String nome, int magnitude, String caracteristicas, TipoAcao tipo, Pericia pericia, AreaCientifica areaCientifica, List<Efeito> efeitos) {
         this.id = id;
         this.nome = nome;
         this.magnitude = magnitude;
@@ -24,6 +26,17 @@ public abstract class Acao {
         this.pericia = pericia;
         this.areaCientifica = areaCientifica;
         this.efeitos = efeitos;
+    }
+
+    public Acao() {
+        this.id = 0;
+        this.nome = "";
+        this.magnitude = 0;
+        this.caracteristicas = "";
+        this.tipo = new TipoAcao();
+        this.pericia = new Pericia();
+        this.areaCientifica = new AreaCientifica();
+        this.efeitos = new ArrayList<>();
     }
 
     public int getId() {
@@ -82,11 +95,11 @@ public abstract class Acao {
         this.areaCientifica = areaCientifica;
     }
 
-    public Efeito[] getEfeitos() {
+    public List<Efeito> getEfeitos() {
         return efeitos;
     }
 
-    public void setEfeitos(Efeito[] efeitos) {
+    public void setEfeitos(List<Efeito> efeitos) {
         this.efeitos = efeitos;
     }
 }

@@ -312,7 +312,7 @@ public class Ser {
         this.calculaEspecial();
         this.calculaDeslocamentos();
         this.criaListaPericias();
-//        this.criaListaHabilidades();
+        this.criaListaHabilidades();
 //        this.criaListaArcnidades();
 //        this.calculaCansaco();
 //        this.calculaComportamento();
@@ -331,19 +331,37 @@ public class Ser {
 //        this.calculaExperiencia();
     }
 
+    // Pega habilidades da Espécie
+    public void criaListaHabilidades() {
+        List<Habilidade> habilidades = new ArrayList<>();
+
+        for(Especie esp: this.identidade.getEspecies()){
+            for (Habilidade hab: esp.getHabilidades()){
+                if (habilidades.stream().filter(h -> h.getId() == hab.getId()).collect(Collectors.toList()).size() == 0){
+                    this.getHabilidades().add(hab);
+                }
+            }
+        }
+    }
+
     // Pega perícias da Classe e da Espécie
     public void criaListaPericias() {
         List<Pericia> pericias = new ArrayList<>();
 
         for(Classe cla: this.identidade.getClasses()){
             for (Pericia per: cla.getPericias()){
-                this.getPericias().add(per);
+                //Só adiciona perícia se não houver nenhuma perícia com o mesmo ID
+                if (pericias.stream().filter(p -> p.getId() == per.getId()).collect(Collectors.toList()).size() == 0){
+                    this.getPericias().add(per);
+                }
             }
         }
 
         for(Especie esp: this.identidade.getEspecies()){
             for (Pericia per: esp.getPericias()){
-                this.getPericias().add(per);
+                if (pericias.stream().filter(p -> p.getId() == per.getId()).collect(Collectors.toList()).size() == 0){
+                    this.getPericias().add(per);
+                }
             }
         }
     }

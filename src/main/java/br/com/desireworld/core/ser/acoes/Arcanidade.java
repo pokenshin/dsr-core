@@ -5,13 +5,15 @@ import br.com.desireworld.core.Energia;
 import br.com.desireworld.core.ciencias.AreaCientifica;
 import br.com.desireworld.core.ser.Pericia;
 
+import java.util.List;
+
 public class Arcanidade extends Acao {
 
     private String escola;
     private int nucleo;
     private Energia energia;
 
-    public Arcanidade(int id, String nome, int magnitude, String caracteristicas, TipoAcao tipo, Pericia pericia, AreaCientifica areaCientifica, Efeito[] efeitos, String escola, int nucleo, Energia energia) {
+    public Arcanidade(int id, String nome, int magnitude, String caracteristicas, TipoAcao tipo, Pericia pericia, AreaCientifica areaCientifica, List<Efeito> efeitos, String escola, int nucleo, Energia energia) {
         super(id, nome, magnitude, caracteristicas, tipo, pericia, areaCientifica, efeitos);
         this.escola = escola;
         this.nucleo = nucleo;
