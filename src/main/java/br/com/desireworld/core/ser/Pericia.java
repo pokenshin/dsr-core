@@ -15,6 +15,13 @@ public class Pericia {
         this.caracteristicas = caracteristicas;
     }
 
+    public Pericia() {
+        this.id = 0;
+        this.nome = "";
+        this.ciencia = new Ciencia();
+        this.caracteristicas = "";
+    }
+
     public int getId() {
         return id;
     }

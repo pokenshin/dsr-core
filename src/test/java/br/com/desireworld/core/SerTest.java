@@ -1,7 +1,9 @@
 package br.com.desireworld.core;
 
+import br.com.desireworld.core.ser.Classe;
 import br.com.desireworld.core.ser.Deslocamento;
 import br.com.desireworld.core.ser.Especie;
+import br.com.desireworld.core.ser.Pericia;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,7 +34,7 @@ public class SerTest {
 //  DeslocamentoMar = (Minimo da Especie * (FatorDex + FatorFor)) / 4
 //  DeslocamentoAr = (Minimo da Especie * (FatorDex + FatorFor)) / 3
 //  DeslocamentoEspaco = Minimo da Especie * (FatorDex + FatorFor)
-    public void calculaDeslocamento(){
+    public void calculaDeslocamentos(){
         //Adiciona Espécie
         this.ser.getIdentidade().getEspecies().add(new Especie());
         this.ser.getIdentidade().getEspecies().add(new Especie());
@@ -67,5 +69,20 @@ public class SerTest {
         assertNotNull(this.ser.getDeslocamento("Mar"));
         assertNotNull(this.ser.getDeslocamento("Ar"));
         assertNotNull(this.ser.getDeslocamento("Espaço"));
+    }
+
+    @Test
+    public void criaListaPericias() {
+        for (int i = 0; i < 2 ; i++) {
+            this.ser.getIdentidade().getClasses().add(new Classe());
+            this.ser.getIdentidade().getEspecies().add(new Especie());
+            for (int j = 0; j < 3 ; j++) {
+                this.ser.getIdentidade().getClasses().get(i).getPericias().add(new Pericia());
+                this.ser.getIdentidade().getEspecies().get(i).getPericias().add(new Pericia());
+            }
+        }
+        this.ser.criaListaPericias();
+        assertEquals(12, this.ser.getPericias().size());
+
     }
 }

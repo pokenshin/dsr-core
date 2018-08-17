@@ -5,6 +5,12 @@ public class Ciencia {
     private String nome;
     private Esfera esfera;
 
+    public Ciencia() {
+        this.id = 0;
+        this.nome = "";
+        this.esfera = new Esfera();
+    }
+
     public int getId() {
         return id;
     }

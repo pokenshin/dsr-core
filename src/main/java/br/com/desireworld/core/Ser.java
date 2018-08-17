@@ -311,7 +311,7 @@ public class Ser {
     public void calcular(){
         this.calculaEspecial();
         this.calculaDeslocamentos();
-//        this.criaListaPericias();
+        this.criaListaPericias();
 //        this.criaListaHabilidades();
 //        this.criaListaArcnidades();
 //        this.calculaCansaco();
@@ -329,6 +329,23 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    // Pega perícias da Classe e da Espécie
+    public void criaListaPericias() {
+        List<Pericia> pericias = new ArrayList<>();
+
+        for(Classe cla: this.identidade.getClasses()){
+            for (Pericia per: cla.getPericias()){
+                this.getPericias().add(per);
+            }
+        }
+
+        for(Especie esp: this.identidade.getEspecies()){
+            for (Pericia per: esp.getPericias()){
+                this.getPericias().add(per);
+            }
+        }
     }
 
     public void calculaEspecial() {
@@ -411,42 +428,5 @@ public class Ser {
             return media.divide(deslocamentos.size());
         }
     }
-
-    //  DeslocamentoEspaco = Minimo da Especie * (FatorDex + FatorFor)
-    private void calculaDeslocamentoEspaco() {
-
-    }
-
-//  DeslocamentoAr = (Minimo da Especie * (FatorDex + FatorFor)) / 3
-    private void calculaDeslocamentoAr() {
-
-    }
-
-//  DeslocamentoMar = (Minimo da Especie * (FatorDex + FatorFor)) / 4
-    private void calculaDeslocamentoMar(double fatorTotal) {
-        Deslocamento deslocamento = new Deslocamento(new ValorMag(), "Mar");
-        List<Deslocamento> desSoloEspecie = this.identidade.getEspecies().get(0).getDeslocamentosMedios().stream()
-                .filter(d -> d.getTipo() == "Mar")
-                .collect(Collectors.toList());
-        if (desSoloEspecie.size() > 0){
-            deslocamento.setValor(desSoloEspecie.get(0).getValor().multiply(new ValorMag(fatorTotal)));
-            deslocamento.setValor(deslocamento.getValor().divide(4));
-        }
-        this.deslocamentos.add(deslocamento);
-    }
-
-//  DeslocamentoSolo = Minimo da Especie * (FatorDex + FatorFor) / 2
-    private void calculaDeslocamentoSolo(double fatorTotal) {
-        Deslocamento deslocamento = new Deslocamento(new ValorMag(), "Solo");
-        List<Deslocamento> desSoloEspecie = this.identidade.getEspecies().get(0).getDeslocamentosMedios().stream()
-                .filter(d -> d.getTipo() == "Solo")
-                .collect(Collectors.toList());
-        if (desSoloEspecie.size() > 0){
-            deslocamento.setValor(desSoloEspecie.get(0).getValor().multiply(new ValorMag(fatorTotal)));
-            deslocamento.setValor(deslocamento.getValor().divide(2));
-        }
-        this.deslocamentos.add(deslocamento);
-    }
-
 
 }

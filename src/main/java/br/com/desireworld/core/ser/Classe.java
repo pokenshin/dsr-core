@@ -2,6 +2,9 @@ package br.com.desireworld.core.ser;
 
 import br.com.desireworld.core.ciencias.Ciencia;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Classe {
     private int id;
     private String nome;
@@ -13,9 +16,9 @@ public class Classe {
     private String atributoEspiritual;
     private String descricao;
     private Ciencia ciencia;
-    private Pericia[] pericias;
+    private List<Pericia> pericias;
 
-    public Classe(int id, String nome, String estilo, String funcao, String origemPoder, String atributoFisico, String atributoMental, String atributoEspiritual, String descricao, Ciencia ciencia, Pericia[] pericias) {
+    public Classe(int id, String nome, String estilo, String funcao, String origemPoder, String atributoFisico, String atributoMental, String atributoEspiritual, String descricao, Ciencia ciencia, List<Pericia> pericias) {
         this.id = id;
         this.nome = nome;
         this.estilo = estilo;
@@ -27,6 +30,20 @@ public class Classe {
         this.descricao = descricao;
         this.ciencia = ciencia;
         this.pericias = pericias;
+    }
+
+    public Classe() {
+        this.id = 0;
+        this.nome = "";
+        this.estilo = "";
+        this.funcao = "";
+        this.origemPoder = "";
+        this.atributoFisico = "";
+        this.atributoMental = "";
+        this.atributoEspiritual = "";
+        this.descricao = "";
+        this.ciencia = new Ciencia();
+        this.pericias = new ArrayList<>();
     }
 
     public int getId() {
@@ -109,11 +126,11 @@ public class Classe {
         this.ciencia = ciencia;
     }
 
-    public Pericia[] getPericias() {
+    public List<Pericia> getPericias() {
         return pericias;
     }
 
-    public void setPericias(Pericia[] pericias) {
+    public void setPericias(List<Pericia> pericias) {
         this.pericias = pericias;
     }
 }
