@@ -20,7 +20,7 @@ public class Deslocamento {
     }
 
     public String toString(){
-        return this.valor.toString() + " " + this.unidade;
+        return this.tipo + " - " + this.valor.toString() + " " + this.unidade;
     }
 
     public ValorMag getValor() {

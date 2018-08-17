@@ -153,6 +153,9 @@ public class ValorMag {
     }
 
     public ValorMag add(ValorMag valor){
+        if (this.toString() == "0m0"){
+            return valor;
+        }
         double valorFinal;
         double magnitudeFinal;
         int valor1 = this.valor;

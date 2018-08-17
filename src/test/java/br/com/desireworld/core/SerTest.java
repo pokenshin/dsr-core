@@ -35,23 +35,37 @@ public class SerTest {
     public void calculaDeslocamento(){
         //Adiciona Espécie
         this.ser.getIdentidade().getEspecies().add(new Especie());
+        this.ser.getIdentidade().getEspecies().add(new Especie());
+        this.ser.getIdentidade().getEspecies().add(new Especie());
         //Adiciona deslocamento do tipo "Solo" na espécie
         this.ser.getIdentidade().getEspecies().get(0).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(25, 2), "Solo"));
+        this.ser.getIdentidade().getEspecies().get(1).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(28, 2), "Solo"));
+        this.ser.getIdentidade().getEspecies().get(2).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(73, 2), "Solo"));
         //Adiciona deslocamento do tipo "Mar" na espécie
         this.ser.getIdentidade().getEspecies().get(0).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(16, 2), "Mar"));
+        this.ser.getIdentidade().getEspecies().get(1).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(28, 2), "Mar"));
+        this.ser.getIdentidade().getEspecies().get(2).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(88, 2), "Mar"));
         //Adiciona deslocamento do tipo "Ar" na espécie
-        this.ser.getIdentidade().getEspecies().get(0).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(10, 2), "Ar"));
+        this.ser.getIdentidade().getEspecies().get(0).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(0, 0), "Ar"));
+        this.ser.getIdentidade().getEspecies().get(1).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(77, 2), "Ar"));
+        this.ser.getIdentidade().getEspecies().get(2).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(10, 3), "Ar"));
         //Adiciona deslocamento do tipo "Espaço" na espécie
         this.ser.getIdentidade().getEspecies().get(0).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(34, 2), "Espaço"));
+        this.ser.getIdentidade().getEspecies().get(1).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(99, 2), "Espaço"));
+        this.ser.getIdentidade().getEspecies().get(2).getDeslocamentosMedios().add(new Deslocamento(new ValorMag(21, 3), "Espaço"));
+
         //Seta pontos minimos de Força da especie
-        this.ser.getIdentidade().getEspecies().get(0).getAtributos().getMin().getForca().setPontos(35);
+        this.ser.getIdentidade().getEspecies().get(0).getAtributos().getMin().getForca().setPontos(10);
         //Seta pontos minimos de Destreza da especie
-        this.ser.getIdentidade().getEspecies().get(0).getAtributos().getMin().getDestreza().setPontos(26);
+        this.ser.getIdentidade().getEspecies().get(0).getAtributos().getMin().getDestreza().setPontos(10);
         //Seta pontos de destreza atuais do ser
-        this.ser.getAtributos().getForca().setPontos(39);
-        this.ser.getAtributos().getDestreza().setPontos(29);
+        this.ser.getAtributos().getForca().setPontos(16);
+        this.ser.getAtributos().getDestreza().setPontos(14);
 
         this.ser.calculaDeslocamentos();
         assertNotNull(this.ser.getDeslocamento("Solo"));
+        assertNotNull(this.ser.getDeslocamento("Mar"));
+        assertNotNull(this.ser.getDeslocamento("Ar"));
+        assertNotNull(this.ser.getDeslocamento("Espaço"));
     }
 }
