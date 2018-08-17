@@ -314,7 +314,7 @@ public class Ser {
         this.criaListaPericias();
         this.criaListaHabilidades();
 //        this.criaListaArcnidades();
-//        this.calculaCansaco();
+        this.calculaCansaco();
 //        this.calculaComportamento();
 //        this.calculaFe();
 //        this.calculaKarma();
@@ -329,6 +329,10 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    private void calculaCansaco() {
+
     }
 
     // Pega habilidades da Espécie
