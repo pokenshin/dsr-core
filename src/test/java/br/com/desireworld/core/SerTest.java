@@ -98,4 +98,15 @@ public class SerTest {
         this.ser.criaListaHabilidades();
         assertEquals(6, this.ser.getHabilidades().size());
     }
+
+    @Test
+    public void calculaCansaco() {
+        for (int i = 0; i < 2 ; i++) {
+            this.ser.getIdentidade().getEspecies().add(new Especie());
+            this.ser.getIdentidade().getEspecies().get(i).setCansaco(new Intervalo<>(0, 3 * i+1));
+        }
+        this.ser.calculaCansaco();
+        assertEquals(4, this.ser.getElo().getCansacoMax());
+        assertEquals(0, this.ser.getElo().getCansacoAtual());
+    }
 }
