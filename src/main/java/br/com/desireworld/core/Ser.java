@@ -331,7 +331,16 @@ public class Ser {
 //        this.calculaExperiencia();
     }
 
-    private void calculaCansaco() {
+    //Máximo de cansaço do ser
+    public void calculaCansaco() {
+        List<Integer> cansacoMax = this.identidade.getEspecies().stream()
+                .map(e -> e.getCansaco().getMax())
+                .collect(Collectors.toList());
+
+        this.elo.setCansacoMax(cansacoMax.stream()
+                .mapToInt(c -> c)
+                .max()
+                .getAsInt());
 
     }
 
