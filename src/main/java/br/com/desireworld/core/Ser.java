@@ -315,7 +315,7 @@ public class Ser {
         this.criaListaHabilidades();
 //        this.criaListaArcnidades();
         this.calculaCansaco();
-//        this.calculaComportamento();
+        this.calculaComportamento();
 //        this.calculaFe();
 //        this.calculaKarma();
 //        this.calculaSubatributos();
@@ -331,17 +331,49 @@ public class Ser {
 //        this.calculaExperiencia();
     }
 
+    //Máximo entre as espécies do Ser
+    public void calculaComportamento() {
+        this.elo.getComportamento().setHonra(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getHonra())
+                .collect(Collectors.toList())
+        ));
+        this.elo.getComportamento().setMoral(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getMoral())
+                .collect(Collectors.toList())
+        ));
+        this.elo.getComportamento().setPersonalidade(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getPersonalidade())
+                .collect(Collectors.toList())
+        ));
+        this.elo.getComportamento().setApresentacao(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getApresentacao())
+                .collect(Collectors.toList())
+        ));
+        this.elo.getComportamento().setPercepcao(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getPercepcao())
+                .collect(Collectors.toList())
+        ));
+        this.elo.getComportamento().setConcepcao(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getComportamento().getConcepcao())
+                .collect(Collectors.toList())
+        ));
+    }
+
+    //Pega o maior inteiro de uma lista de inteiros
+    private int getMax(List<Integer> lista){
+        return lista.stream()
+                .mapToInt(i -> i)
+                .max()
+                .getAsInt();
+    }
+
     //Máximo de cansaço do ser
     public void calculaCansaco() {
         List<Integer> cansacoMax = this.identidade.getEspecies().stream()
                 .map(e -> e.getCansaco().getMax())
                 .collect(Collectors.toList());
 
-        this.elo.setCansacoMax(cansacoMax.stream()
-                .mapToInt(c -> c)
-                .max()
-                .getAsInt());
-
+        this.elo.setCansacoMax(getMax(cansacoMax));
     }
 
     // Pega habilidades da Espécie

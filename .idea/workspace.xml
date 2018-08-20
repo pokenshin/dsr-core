@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" line="19" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" line="16" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" line="47" />
     <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/ValorMagTest.java" />
   </component>
@@ -14,6 +14,7 @@
     <list default="true" id="7f27adf1-8206-45d7-8b7b-bd5f967dd35b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,23 +30,17 @@
       <file leaf-file-name="Ser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="334" column="29" lean-forward="true" selection-start-line="334" selection-start-column="29" selection-end-line="334" selection-end-column="29" />
+            <state relative-caret-position="331">
+              <caret line="356" column="61" selection-start-line="356" selection-start-column="61" selection-end-line="356" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Identidade.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Identidade.java">
+      <file leaf-file-name="Elo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Elo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="76" selection-start-line="76" selection-end-line="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1934#1935#0" expanded="true" />
-                <element signature="e#2069#2070#0" expanded="true" />
-                <element signature="e#2099#2100#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -53,8 +48,8 @@
       <file leaf-file-name="SerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+            <state relative-caret-position="229">
+              <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -148,8 +143,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-25" />
-    <option name="y" value="122" />
+    <option name="x" value="514" />
+    <option name="y" value="205" />
     <option name="width" value="1280" />
     <option name="height" value="735" />
   </component>
@@ -265,9 +260,55 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SerTest.criaListaHabilidades">
+  <component name="RunManager" selected="JUnit.SerTest.calculaComportamento">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SerTest.calculaCansaco" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dsr-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.desireworld.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
+      <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
+      <option name="METHOD_NAME" value="calculaCansaco" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="SerTest.calculaComportamento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dsr-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.desireworld.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
+      <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
+      <option name="METHOD_NAME" value="calculaComportamento" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration name="SerTest.calculaDeslocamento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dsr-core" />
@@ -282,29 +323,6 @@
       <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
       <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
       <option name="METHOD_NAME" value="calculaDeslocamento" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="SerTest.calculaEspecial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dsr-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.desireworld.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
-      <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
-      <option name="METHOD_NAME" value="calculaEspecial" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -361,29 +379,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ValorMagTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dsr-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="br.com.desireworld.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
-      <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.ValorMagTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -423,19 +418,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.ValorMagTest" />
-      <item itemvalue="JUnit.SerTest.calculaEspecial" />
       <item itemvalue="JUnit.SerTest.calculaDeslocamento" />
       <item itemvalue="JUnit.SerTest.criaListaPericias" />
       <item itemvalue="JUnit.SerTest.criaListaHabilidades" />
+      <item itemvalue="JUnit.SerTest.calculaCansaco" />
+      <item itemvalue="JUnit.SerTest.calculaComportamento" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SerTest.calculaComportamento" />
+        <item itemvalue="JUnit.SerTest.calculaCansaco" />
         <item itemvalue="JUnit.SerTest.criaListaHabilidades" />
         <item itemvalue="JUnit.SerTest.criaListaPericias" />
         <item itemvalue="JUnit.SerTest.calculaDeslocamento" />
-        <item itemvalue="JUnit.SerTest.calculaEspecial" />
-        <item itemvalue="JUnit.ValorMagTest" />
       </list>
     </recent_temporary>
   </component>
@@ -510,25 +505,24 @@
       <option name="project" value="LOCAL" />
       <updated>1534541903529</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cálculo de cansaço dentro do ser (TODO: Unit tests)">
+      <created>1534768939846</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1534768939846</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Testes unitários do cálculo de Cansaço">
+      <created>1534783369896</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1534783369896</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SerTest_calculaDeslocamento - 2018.08.17 at 13h 58m 43s.xml">
-      <configuration name="SerTest.calculaDeslocamento" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaDeslocamento - 2018.08.17 at 13h 58m 46s.xml">
-      <configuration name="SerTest.calculaDeslocamento" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaDeslocamento - 2018.08.17 at 13h 58m 52s.xml">
-      <configuration name="SerTest.calculaDeslocamento" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_criaListaPericias - 2018.08.17 at 14h 46m 08s.xml">
-      <configuration name="SerTest.criaListaPericias" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_criaListaHabilidades - 2018.08.17 at 16h 21m 33s.xml">
-      <configuration name="SerTest.criaListaHabilidades" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SerTest_criaListaHabilidades - 2018.08.17 at 16h 21m 56s.xml">
       <configuration name="SerTest.criaListaHabilidades" configurationId="JUnit" />
     </history-entry>
@@ -544,6 +538,21 @@
     <history-entry file="SerTest_criaListaHabilidades - 2018.08.17 at 16h 25m 44s.xml">
       <configuration name="SerTest.criaListaHabilidades" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SerTest_calculaCansaco - 2018.08.20 at 11h 33m 23s.xml">
+      <configuration name="SerTest.calculaCansaco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaCansaco - 2018.08.20 at 11h 35m 08s.xml">
+      <configuration name="SerTest.calculaCansaco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaCansaco - 2018.08.20 at 11h 35m 35s.xml">
+      <configuration name="SerTest.calculaCansaco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaCansaco - 2018.08.20 at 11h 35m 43s.xml">
+      <configuration name="SerTest.calculaCansaco" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaCansaco - 2018.08.20 at 11h 43m 38s.xml">
+      <configuration name="SerTest.calculaCansaco" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -551,6 +560,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32755905" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -568,14 +578,13 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2913386" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2913386" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913387" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32755905" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -592,12 +601,14 @@
     <MESSAGE value="Cálculo de Perícias do ser e testes unitários criados" />
     <MESSAGE value="Cálculo de Habilidades e Testes Unitários" />
     <MESSAGE value="Commit de backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit de backup" />
+    <MESSAGE value="Cálculo de cansaço dentro do ser (TODO: Unit tests)" />
+    <MESSAGE value="Testes unitários do cálculo de Cansaço" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testes unitários do cálculo de Cansaço" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="44" />
+      <option name="time" value="48" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -793,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Experiencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Taxonomia.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -929,12 +933,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Identidade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
+        <state relative-caret-position="315">
           <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -945,10 +953,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Experiencia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -959,10 +967,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="334" column="29" lean-forward="true" selection-start-line="334" selection-start-column="29" selection-end-line="334" selection-end-column="29" />
+        <state relative-caret-position="331">
+          <caret line="356" column="61" selection-start-line="356" selection-start-column="61" selection-end-line="356" selection-end-column="61" />
         </state>
       </provider>
     </entry>

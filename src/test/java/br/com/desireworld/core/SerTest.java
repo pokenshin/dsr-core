@@ -1,9 +1,6 @@
 package br.com.desireworld.core;
 
-import br.com.desireworld.core.ser.Classe;
-import br.com.desireworld.core.ser.Deslocamento;
-import br.com.desireworld.core.ser.Especie;
-import br.com.desireworld.core.ser.Pericia;
+import br.com.desireworld.core.ser.*;
 import br.com.desireworld.core.ser.acoes.Habilidade;
 import org.junit.Before;
 import org.junit.Test;
@@ -108,5 +105,22 @@ public class SerTest {
         this.ser.calculaCansaco();
         assertEquals(4, this.ser.getElo().getCansacoMax());
         assertEquals(0, this.ser.getElo().getCansacoAtual());
+    }
+
+    @Test
+    public void calculaComportamento(){
+        for (int i = 0; i < 3 ; i++) {
+            Comportamento comportamento = new Comportamento(5*(i+1), 3*(i+1), 7*(i+1), 6*(i+1), 2*(i+1), 9 * (i+1));
+
+            this.ser.getIdentidade().getEspecies().add(new Especie());
+            this.ser.getIdentidade().getEspecies().get(i).setComportamento(comportamento);
+        }
+        this.ser.calculaComportamento();
+        assertEquals(15, this.ser.getElo().getComportamento().getHonra());
+        assertEquals(9, this.ser.getElo().getComportamento().getMoral());
+        assertEquals(21, this.ser.getElo().getComportamento().getPersonalidade());
+        assertEquals(18, this.ser.getElo().getComportamento().getApresentacao());
+        assertEquals(6, this.ser.getElo().getComportamento().getPercepcao());
+        assertEquals(27, this.ser.getElo().getComportamento().getConcepcao());
     }
 }
