@@ -10,9 +10,9 @@ public class Criatividade extends Atributo {
     private ValorMag realidade;
     private ValorMag irrealidade;
     private ValorMag bonusMP;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Criatividade(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag singularidade, ValorMag invencao, ValorMag tutor, ValorMag realidade, ValorMag irrealidade, ValorMag bonusMP, int bonusCP) {
+    public Criatividade(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag singularidade, ValorMag invencao, ValorMag tutor, ValorMag realidade, ValorMag irrealidade, ValorMag bonusMP, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.singularidade = singularidade;
         this.invencao = invencao;
@@ -31,7 +31,7 @@ public class Criatividade extends Atributo {
         this.realidade = new ValorMag();
         this.irrealidade = new ValorMag();
         this.bonusMP = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
     }
 
     public ValorMag getSingularidade() {
@@ -82,11 +82,11 @@ public class Criatividade extends Atributo {
         this.bonusMP = bonusMP;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

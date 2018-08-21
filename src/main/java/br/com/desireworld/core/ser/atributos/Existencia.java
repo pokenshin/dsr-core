@@ -8,9 +8,9 @@ public class Existencia extends Atributo {
     private ValorMag ciencia;
     private ValorMag consciencia;
     private ValorMag memoria;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Existencia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag conhecimento, ValorMag experiencia, ValorMag ciencia, ValorMag consciencia, ValorMag memoria, int bonusCP) {
+    public Existencia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag conhecimento, ValorMag experiencia, ValorMag ciencia, ValorMag consciencia, ValorMag memoria, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.conhecimento = conhecimento;
         this.experiencia = experiencia;
@@ -27,7 +27,7 @@ public class Existencia extends Atributo {
         this.ciencia = new ValorMag();
         this.consciencia = new ValorMag();
         this.memoria = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
     }
 
     public ValorMag getConhecimento() {
@@ -70,11 +70,11 @@ public class Existencia extends Atributo {
         this.memoria = memoria;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

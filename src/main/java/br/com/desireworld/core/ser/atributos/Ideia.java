@@ -9,9 +9,9 @@ public class Ideia extends Atributo {
     private ValorMag holismo;
     private ValorMag nexo;
     private ValorMag bonusMP;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Ideia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, int ki, int base, ValorMag misterio, ValorMag holismo, ValorMag nexo, ValorMag bonusMP, int bonusCP) {
+    public Ideia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, int ki, int base, ValorMag misterio, ValorMag holismo, ValorMag nexo, ValorMag bonusMP, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.ki = ki;
         this.base = base;
@@ -30,7 +30,7 @@ public class Ideia extends Atributo {
         this.holismo = new ValorMag();
         this.nexo = new ValorMag();
         this.bonusMP = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
 
     }
 
@@ -82,11 +82,11 @@ public class Ideia extends Atributo {
         this.bonusMP = bonusMP;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

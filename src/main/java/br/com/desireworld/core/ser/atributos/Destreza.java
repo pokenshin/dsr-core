@@ -8,9 +8,9 @@ public class Destreza extends Atributo {
     private ValorMag ataque;
     private ValorMag coordenacao;
     private ValorMag iniciativa;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Destreza(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag reflexo, ValorMag esquiva, ValorMag ataque, ValorMag coordenacao, ValorMag iniciativa, int bonusCP) {
+    public Destreza(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag reflexo, ValorMag esquiva, ValorMag ataque, ValorMag coordenacao, ValorMag iniciativa, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.reflexo = reflexo;
         this.esquiva = esquiva;
@@ -27,7 +27,7 @@ public class Destreza extends Atributo {
         this.ataque = new ValorMag();
         this.coordenacao = new ValorMag();
         this.iniciativa = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
     }
 
     public ValorMag getReflexo() {
@@ -70,11 +70,11 @@ public class Destreza extends Atributo {
         this.iniciativa = iniciativa;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

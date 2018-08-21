@@ -8,9 +8,9 @@ public class Materia extends Atributo {
     private ValorMag aprendizagem;
     private ValorMag senso;
     private ValorMag eidos;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Materia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag concentracao, ValorMag visualizacao, ValorMag aprendizagem, ValorMag senso, ValorMag eidos, int bonusCP) {
+    public Materia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag concentracao, ValorMag visualizacao, ValorMag aprendizagem, ValorMag senso, ValorMag eidos, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.concentracao = concentracao;
         this.visualizacao = visualizacao;
@@ -27,7 +27,7 @@ public class Materia extends Atributo {
         this.aprendizagem = new ValorMag();
         this.senso = new ValorMag();
         this.eidos = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
     }
 
     public ValorMag getConcentracao() {
@@ -70,11 +70,11 @@ public class Materia extends Atributo {
         this.eidos = eidos;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

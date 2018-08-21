@@ -8,9 +8,9 @@ public class Forca extends Atributo {
     private ValorMag dureza;
     private ValorMag vigor;
     private ValorMag sustentacao;
-    private int bonusCP;
+    private ValorMag bonusCP;
 
-    public Forca(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag potencia, ValorMag golpe, ValorMag dureza, ValorMag vigor, ValorMag sustentacao, int bonusCP) {
+    public Forca(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag potencia, ValorMag golpe, ValorMag dureza, ValorMag vigor, ValorMag sustentacao, ValorMag bonusCP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
         this.potencia = potencia;
         this.golpe = golpe;
@@ -27,7 +27,7 @@ public class Forca extends Atributo {
         this.dureza = new ValorMag();
         this.vigor = new ValorMag();
         this.sustentacao = new ValorMag();
-        this.bonusCP = 0;
+        this.bonusCP = new ValorMag();
     }
 
     public ValorMag getPotencia() {
@@ -70,11 +70,11 @@ public class Forca extends Atributo {
         this.sustentacao = sustentacao;
     }
 
-    public int getBonusCP() {
+    public ValorMag getBonusCP() {
         return bonusCP;
     }
 
-    public void setBonusCP(int bonusCP) {
+    public void setBonusCP(ValorMag bonusCP) {
         this.bonusCP = bonusCP;
     }
 }

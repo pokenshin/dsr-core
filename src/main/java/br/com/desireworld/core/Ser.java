@@ -342,6 +342,13 @@ public class Ser {
         //Autocontrole = (Intelecto + Existencia) / 2
         this.subatributos.setAutocontrole(this.atributos.getIntelecto().getPorcentagem().add(this.atributos.getExistencia().getPorcentagem()));
         this.subatributos.setAutocontrole(this.subatributos.getAutocontrole().divide(2));
+        //CP = todos os atributos somados
+        this.subatributos.setBonusCP(this.atributos.getForca().getBonusCP().add(this.atributos.getDestreza().getBonusCP()));
+        this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getMateria().getBonusCP()));
+        this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getExistencia().getBonusCP()));
+        this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getCriatividade().getBonusCP()));
+        this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getIntelecto().getBonusCP()));
+        this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getForca().getBonusCP()));
 
     }
 
