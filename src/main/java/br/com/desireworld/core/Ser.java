@@ -318,7 +318,7 @@ public class Ser {
         this.calculaComportamento();
         this.calculaFe();
         this.calculaKarma();
-//        this.calculaSubatributos();
+        this.calculaSubatributos();
 //        this.calculaCerne();
 //        this.calculaIra();
 //        this.calculaForcaVontade();
@@ -329,6 +329,13 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    public void calculaSubatributos() {
+        //Anatomia = (Materia + Força + Destreza) /3
+        this.subatributos.setAnatomia(this.atributos.getMateria().getPorcentagem().add(this.atributos.getForca().getPorcentagem()));
+        this.subatributos.setAnatomia(this.subatributos.getAnatomia().add(this.atributos.getDestreza().getPorcentagem()));
+        this.subatributos.setAnatomia(this.subatributos.getAnatomia().divide(3));
     }
 
     public void calculaKarma() {

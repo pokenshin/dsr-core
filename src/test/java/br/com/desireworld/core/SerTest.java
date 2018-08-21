@@ -2,6 +2,7 @@ package br.com.desireworld.core;
 
 import br.com.desireworld.core.ser.*;
 import br.com.desireworld.core.ser.acoes.Habilidade;
+import br.com.desireworld.core.ser.atributos.Atributos;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -133,5 +134,18 @@ public class SerTest {
         }
         this.ser.calculaKarma();
         assertEquals(30, this.ser.getElo().getKarma());
+    }
+
+    @Test
+    public void calculaSubatributos(){
+        Atributos atributos = new Atributos();
+        atributos.getMateria().setPorcentagem(new ValorMag(45, 2));
+        atributos.getForca().setPorcentagem(new ValorMag(66, 2));
+        atributos.getDestreza().setPorcentagem(new ValorMag(54, 2));
+
+        this.ser.setAtributos(atributos);
+        this.ser.calculaSubatributos();
+
+        assertEquals(new ValorMag(53, 2), this.ser.getSubatributos().getAnatomia());
     }
 }
