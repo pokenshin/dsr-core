@@ -123,4 +123,15 @@ public class SerTest {
         assertEquals(6, this.ser.getElo().getComportamento().getPercepcao());
         assertEquals(27, this.ser.getElo().getComportamento().getConcepcao());
     }
+
+    @Test
+    public void calculaKarma(){
+        for (int i = 0; i < 3 ; i++) {
+            Especie especie = new Especie();
+            especie.setKarma(new Intervalo<Integer>(((i+1)*10), 90));
+            this.ser.getIdentidade().getEspecies().add(especie);
+        }
+        this.ser.calculaKarma();
+        assertEquals(30, this.ser.getElo().getKarma());
+    }
 }

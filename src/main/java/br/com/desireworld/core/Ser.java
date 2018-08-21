@@ -316,8 +316,8 @@ public class Ser {
 //        this.criaListaArcnidades();
         this.calculaCansaco();
         this.calculaComportamento();
-//        this.calculaFe();
-//        this.calculaKarma();
+        this.calculaFe();
+        this.calculaKarma();
 //        this.calculaSubatributos();
 //        this.calculaCerne();
 //        this.calculaIra();
@@ -329,6 +329,21 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    public void calculaKarma() {
+        this.elo.setKarma(getMax(this.identidade.getEspecies().stream()
+                .map (e -> e.getKarma().getMin())
+                .collect(Collectors.toList())
+        ));
+    }
+
+    //Mínimo entre as espécies do Ser
+    public void calculaFe(){
+        this.elo.setFe(getMax(this.identidade.getEspecies().stream()
+            .map (e -> e.getFe().getMin())
+            .collect(Collectors.toList())
+        ));
     }
 
     //Máximo entre as espécies do Ser
@@ -364,6 +379,13 @@ public class Ser {
         return lista.stream()
                 .mapToInt(i -> i)
                 .max()
+                .getAsInt();
+    }
+
+    private int getMin(List<Integer> lista){
+        return lista.stream()
+                .mapToInt(i -> i)
+                .min()
                 .getAsInt();
     }
 
