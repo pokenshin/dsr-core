@@ -142,10 +142,17 @@ public class SerTest {
         atributos.getMateria().setPorcentagem(new ValorMag(45, 2));
         atributos.getForca().setPorcentagem(new ValorMag(66, 2));
         atributos.getDestreza().setPorcentagem(new ValorMag(54, 2));
+        atributos.getCriatividade().setPorcentagem(new ValorMag(38, 2));
+        atributos.getExistencia().setPorcentagem(new ValorMag(48, 2));
 
         this.ser.setAtributos(atributos);
         this.ser.calculaSubatributos();
 
+        //Anatomia = (Materia + Força + Destreza) /3
         assertEquals(new ValorMag(53, 2), this.ser.getSubatributos().getAnatomia());
+        //Animo = (Criatividade + Existencia)/2
+        assertEquals(new ValorMag(43, 2), this.ser.getSubatributos().getAnimo());
+
+
     }
 }

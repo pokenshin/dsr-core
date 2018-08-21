@@ -336,6 +336,11 @@ public class Ser {
         this.subatributos.setAnatomia(this.atributos.getMateria().getPorcentagem().add(this.atributos.getForca().getPorcentagem()));
         this.subatributos.setAnatomia(this.subatributos.getAnatomia().add(this.atributos.getDestreza().getPorcentagem()));
         this.subatributos.setAnatomia(this.subatributos.getAnatomia().divide(3));
+        //Animo = (Criatividade + Existencia)/2
+        this.subatributos.setAnimo(this.atributos.getCriatividade().getPorcentagem().add(this.atributos.getExistencia().getPorcentagem()));
+        this.subatributos.setAnimo(this.subatributos.getAnimo().divide(2));
+        //Autocontrole = (Intelecto + Existencia) / 2
+
     }
 
     public void calculaKarma() {
