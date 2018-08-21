@@ -340,6 +340,8 @@ public class Ser {
         this.subatributos.setAnimo(this.atributos.getCriatividade().getPorcentagem().add(this.atributos.getExistencia().getPorcentagem()));
         this.subatributos.setAnimo(this.subatributos.getAnimo().divide(2));
         //Autocontrole = (Intelecto + Existencia) / 2
+        this.subatributos.setAutocontrole(this.atributos.getIntelecto().getPorcentagem().add(this.atributos.getExistencia().getPorcentagem()));
+        this.subatributos.setAutocontrole(this.subatributos.getAutocontrole().divide(2));
 
     }
 
