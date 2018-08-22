@@ -362,6 +362,10 @@ public class Ser {
         //Instinto = (Ideia + Destreza) / 2
         this.subatributos.setInstinto(this.atributos.getIdeia().getPorcentagem().add(this.atributos.getDestreza().getPorcentagem()));
         this.subatributos.setInstinto(this.subatributos.getInstinto().divide(2));
+        //Movimento = (Destreza + Forca*2) /3
+        this.subatributos.setMovimento(this.atributos.getForca().getPorcentagem().multiply(2));
+        this.subatributos.setMovimento(this.subatributos.getMovimento().add(this.atributos.getDestreza().getPorcentagem()));
+        this.subatributos.setMovimento(this.subatributos.getMovimento().divide(3));
 
     }
 

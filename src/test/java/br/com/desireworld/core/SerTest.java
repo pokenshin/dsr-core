@@ -190,5 +190,7 @@ public class SerTest {
         assertEquals(new ValorMag(66, 4), this.ser.getSubatributos().getBonusSP());
         //Instinto = (Ideia + Destreza) / 2
         assertEquals(new ValorMag(41, 2), this.ser.getSubatributos().getInstinto());
+        //Movimento = (Destreza + Forca*2) /3
+        assertEquals(new ValorMag(60, 2), this.ser.getSubatributos().getMovimento());
     }
 }
