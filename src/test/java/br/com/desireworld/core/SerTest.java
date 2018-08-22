@@ -142,20 +142,34 @@ public class SerTest {
         atributos.getMateria().setPorcentagem(new ValorMag(45, 2));
         atributos.getMateria().setBonusCP(new ValorMag(20, 2));
         atributos.getMateria().setBonusHP(new ValorMag(15, 2));
+        atributos.getMateria().setPontos(10);
+        atributos.getMateria().getEvolucao().setPontosAtuais(3);
         atributos.getForca().setPorcentagem(new ValorMag(66, 2));
         atributos.getForca().setBonusCP(new ValorMag(20, 2));
+        atributos.getForca().setPontos(10);
+        atributos.getForca().getEvolucao().setPontosAtuais(3);
         atributos.getDestreza().setPorcentagem(new ValorMag(54, 2));
         atributos.getDestreza().setBonusCP(new ValorMag(20, 2));
+        atributos.getDestreza().setPontos(10);
+        atributos.getDestreza().getEvolucao().setPontosAtuais(3);
         atributos.getCriatividade().setPorcentagem(new ValorMag(38, 2));
         atributos.getCriatividade().setBonusCP(new ValorMag(20, 2));
         atributos.getCriatividade().setBonusMP(new ValorMag(30, 2));
+        atributos.getCriatividade().setPontos(10);
+        atributos.getCriatividade().getEvolucao().setPontosAtuais(3);
         atributos.getExistencia().setPorcentagem(new ValorMag(48, 2));
         atributos.getExistencia().setBonusCP(new ValorMag(20, 2));
+        atributos.getExistencia().setPontos(10);
+        atributos.getExistencia().getEvolucao().setPontosAtuais(3);
         atributos.getIntelecto().setPorcentagem(new ValorMag(75, 2));
         atributos.getIntelecto().setBonusCP(new ValorMag(20, 2));
+        atributos.getIntelecto().setPontos(10);
+        atributos.getIntelecto().getEvolucao().setPontosAtuais(3);
         atributos.getIdeia().setPorcentagem(new ValorMag(28, 2));
         atributos.getIdeia().setBonusCP(new ValorMag(20, 2));
         atributos.getIdeia().setBonusMP(new ValorMag(13, 2));
+        atributos.getIdeia().setPontos(10);
+        atributos.getIdeia().getEvolucao().setPontosAtuais(3);
 
         this.ser.setAtributos(atributos);
         this.ser.calculaSubatributos();
@@ -172,7 +186,8 @@ public class SerTest {
         assertEquals(new ValorMag(15, 2), this.ser.getSubatributos().getBonusHP());
         //MP = Criatividade + Idéia
         assertEquals(new ValorMag(43, 2), this.ser.getSubatributos().getBonusMP());
-
+        //SP = ((15*(pontos de todos atributos-7))*7) (somar tracinhos)
+        assertEquals(new ValorMag(66, 4), this.ser.getSubatributos().getBonusSP());
 
     }
 }

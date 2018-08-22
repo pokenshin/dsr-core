@@ -30,8 +30,8 @@
       <file leaf-file-name="Ser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="355" lean-forward="true" selection-start-line="355" selection-end-line="355" />
+            <state relative-caret-position="125">
+              <caret line="359" column="472" lean-forward="true" selection-start-line="359" selection-start-column="472" selection-end-line="359" selection-end-column="472" />
             </state>
           </provider>
         </entry>
@@ -39,23 +39,8 @@
       <file leaf-file-name="SerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="173" column="83" selection-start-line="173" selection-start-column="83" selection-end-line="173" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Materia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/atributos/Materia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-              <folding>
-                <element signature="e#385#386#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#501#502#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1065">
+              <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -102,7 +87,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Modificador.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Intervalo.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Cerne.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Subatributos.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/lugares/Plano.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/lugares/Realidade.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/lugares/Origem.java" />
@@ -137,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/atributos/Ideia.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/atributos/Materia.java" />
         <option value="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Subatributos.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" />
       </list>
     </option>
@@ -574,13 +559,17 @@
       <option name="project" value="LOCAL" />
       <updated>1534953113343</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Cálculo e testes de Subatributo - MP">
+      <created>1534953282064</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1534953282064</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SerTest_calculaSubatributos - 2018.08.21 at 13h 33m 21s.xml">
-      <configuration name="SerTest.calculaSubatributos" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SerTest_calculaSubatributos - 2018.08.21 at 13h 34m 51s.xml">
       <configuration name="SerTest.calculaSubatributos" configurationId="JUnit" />
     </history-entry>
@@ -608,6 +597,9 @@
     <history-entry file="SerTest_calculaSubatributos - 2018.08.22 at 12h 51m 26s.xml">
       <configuration name="SerTest.calculaSubatributos" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SerTest_calculaSubatributos - 2018.08.22 at 12h 54m 27s.xml">
+      <configuration name="SerTest.calculaSubatributos" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -615,14 +607,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32755905" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32755905" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32755905" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32913387" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -665,7 +657,8 @@
     <MESSAGE value="Cálculo e testes de Subatributo - Autocontrole" />
     <MESSAGE value="Cálculo e testes de Subatributo - CP" />
     <MESSAGE value="Cálculo e testes de Subatributo - HP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cálculo e testes de Subatributo - HP" />
+    <MESSAGE value="Cálculo e testes de Subatributo - MP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cálculo e testes de Subatributo - MP" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -780,13 +773,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Subatributos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1073,17 +1059,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Subatributos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3511#3512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="173" column="83" selection-start-line="173" selection-start-column="83" selection-end-line="173" selection-end-column="83" />
+        <state relative-caret-position="1065">
+          <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="355" lean-forward="true" selection-start-line="355" selection-end-line="355" />
+        <state relative-caret-position="125">
+          <caret line="359" column="472" lean-forward="true" selection-start-line="359" selection-start-column="472" selection-end-line="359" selection-end-column="472" />
         </state>
       </provider>
     </entry>

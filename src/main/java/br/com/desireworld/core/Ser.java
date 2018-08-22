@@ -353,6 +353,12 @@ public class Ser {
         this.subatributos.setBonusHP(this.atributos.getMateria().getBonusHP());
         //MP = Criatividade + Idéia
         this.subatributos.setBonusMP(this.atributos.getCriatividade().getBonusMP().add(this.atributos.getIdeia().getBonusMP()));
+        //SP = ((15*(pontos de todos atributos-7))*7) (somar tracinhos)
+        int bonusSP = 0;
+        bonusSP = (this.atributos.getForca().getPontos() + this.atributos.getMateria().getPontos() + this.atributos.getDestreza().getPontos() + this.atributos.getIntelecto().getPontos() + this.atributos.getCriatividade().getPontos() + this.atributos.getIdeia().getPontos() + this.atributos.getExistencia().getPontos());
+        bonusSP = (bonusSP - 7) * 105;
+        bonusSP = bonusSP + this.atributos.getForca().getEvolucao().getPontosAtuais() + this.atributos.getDestreza().getEvolucao().getPontosAtuais()  + this.atributos.getMateria().getEvolucao().getPontosAtuais()  + this.atributos.getIntelecto().getEvolucao().getPontosAtuais()  + this.atributos.getCriatividade().getEvolucao().getPontosAtuais()  + this.atributos.getExistencia().getEvolucao().getPontosAtuais()  + this.atributos.getIdeia().getEvolucao().getPontosAtuais();
+        this.subatributos.setBonusSP(new ValorMag(bonusSP));
 
 
     }
