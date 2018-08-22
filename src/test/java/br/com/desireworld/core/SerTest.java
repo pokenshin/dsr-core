@@ -188,6 +188,7 @@ public class SerTest {
         assertEquals(new ValorMag(43, 2), this.ser.getSubatributos().getBonusMP());
         //SP = ((15*(pontos de todos atributos-7))*7) (somar tracinhos)
         assertEquals(new ValorMag(66, 4), this.ser.getSubatributos().getBonusSP());
-
+        //Instinto = (Ideia + Destreza) / 2
+        assertEquals(new ValorMag(41, 2), this.ser.getSubatributos().getInstinto());
     }
 }

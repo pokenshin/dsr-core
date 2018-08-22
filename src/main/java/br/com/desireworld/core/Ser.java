@@ -359,7 +359,9 @@ public class Ser {
         bonusSP = (bonusSP - 7) * 105;
         bonusSP = bonusSP + this.atributos.getForca().getEvolucao().getPontosAtuais() + this.atributos.getDestreza().getEvolucao().getPontosAtuais()  + this.atributos.getMateria().getEvolucao().getPontosAtuais()  + this.atributos.getIntelecto().getEvolucao().getPontosAtuais()  + this.atributos.getCriatividade().getEvolucao().getPontosAtuais()  + this.atributos.getExistencia().getEvolucao().getPontosAtuais()  + this.atributos.getIdeia().getEvolucao().getPontosAtuais();
         this.subatributos.setBonusSP(new ValorMag(bonusSP));
-
+        //Instinto = (Ideia + Destreza) / 2
+        this.subatributos.setInstinto(this.atributos.getIdeia().getPorcentagem().add(this.atributos.getDestreza().getPorcentagem()));
+        this.subatributos.setInstinto(this.subatributos.getInstinto().divide(2));
 
     }
 
