@@ -141,6 +141,7 @@ public class SerTest {
         Atributos atributos = new Atributos();
         atributos.getMateria().setPorcentagem(new ValorMag(45, 2));
         atributos.getMateria().setBonusCP(new ValorMag(20, 2));
+        atributos.getMateria().setBonusHP(new ValorMag(15, 2));
         atributos.getForca().setPorcentagem(new ValorMag(66, 2));
         atributos.getForca().setBonusCP(new ValorMag(20, 2));
         atributos.getDestreza().setPorcentagem(new ValorMag(54, 2));
@@ -165,5 +166,8 @@ public class SerTest {
         assertEquals(new ValorMag(60, 2), this.ser.getSubatributos().getAutocontrole());
         //CP = todos os atributos somados
         assertEquals(new ValorMag(14, 3), this.ser.getSubatributos().getBonusCP());
+        //HP = Matéria
+        assertEquals(new ValorMag(15, 2), this.ser.getSubatributos().getBonusHP());
+
     }
 }
