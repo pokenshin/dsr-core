@@ -148,12 +148,14 @@ public class SerTest {
         atributos.getDestreza().setBonusCP(new ValorMag(20, 2));
         atributos.getCriatividade().setPorcentagem(new ValorMag(38, 2));
         atributos.getCriatividade().setBonusCP(new ValorMag(20, 2));
+        atributos.getCriatividade().setBonusMP(new ValorMag(30, 2));
         atributos.getExistencia().setPorcentagem(new ValorMag(48, 2));
         atributos.getExistencia().setBonusCP(new ValorMag(20, 2));
         atributos.getIntelecto().setPorcentagem(new ValorMag(75, 2));
         atributos.getIntelecto().setBonusCP(new ValorMag(20, 2));
         atributos.getIdeia().setPorcentagem(new ValorMag(28, 2));
         atributos.getIdeia().setBonusCP(new ValorMag(20, 2));
+        atributos.getIdeia().setBonusMP(new ValorMag(13, 2));
 
         this.ser.setAtributos(atributos);
         this.ser.calculaSubatributos();
@@ -168,6 +170,9 @@ public class SerTest {
         assertEquals(new ValorMag(14, 3), this.ser.getSubatributos().getBonusCP());
         //HP = Matéria
         assertEquals(new ValorMag(15, 2), this.ser.getSubatributos().getBonusHP());
+        //MP = Criatividade + Idéia
+        assertEquals(new ValorMag(43, 2), this.ser.getSubatributos().getBonusMP());
+
 
     }
 }

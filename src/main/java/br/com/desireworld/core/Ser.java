@@ -351,6 +351,8 @@ public class Ser {
         this.subatributos.setBonusCP(this.subatributos.getBonusCP().add(this.atributos.getForca().getBonusCP()));
         //HP = Matéria
         this.subatributos.setBonusHP(this.atributos.getMateria().getBonusHP());
+        //MP = Criatividade + Idéia
+        this.subatributos.setBonusMP(this.atributos.getCriatividade().getBonusMP().add(this.atributos.getIdeia().getBonusMP()));
 
 
     }
