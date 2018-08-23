@@ -373,6 +373,10 @@ public class Ser {
         //Raciocinio = (Intelecto + Criatividade) / 2
         this.subatributos.setRaciocinio(this.atributos.getIntelecto().getPorcentagem().add((this.atributos.getCriatividade().getPorcentagem())));
         this.subatributos.setRaciocinio(this.subatributos.getRaciocinio().divide(2));
+        //Subconsciencia = (Existencia + Ideia) / 2
+        this.subatributos.setSubconsciencia(this.atributos.getExistencia().getPorcentagem().add(this.atributos.getIdeia().getPorcentagem()));
+        this.subatributos.setSubconsciencia(this.subatributos.getSubconsciencia().divide(2));
+
     }
 
     public void calculaKarma() {

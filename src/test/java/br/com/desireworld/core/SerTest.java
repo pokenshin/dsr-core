@@ -196,5 +196,8 @@ public class SerTest {
         assertEquals(new ValorMag(53, 2), this.ser.getSubatributos().getPrecisao());
         //Raciocinio = (Intelecto + Criatividade) / 2
         assertEquals(new ValorMag(55, 2), this.ser.getSubatributos().getRaciocinio());
+        //Subconsciencia = (Existencia + Ideia) / 2
+        assertEquals(new ValorMag(38, 2), this.ser.getSubatributos().getSubconsciencia());
+
     }
 }
