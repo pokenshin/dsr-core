@@ -366,6 +366,10 @@ public class Ser {
         this.subatributos.setMovimento(this.atributos.getForca().getPorcentagem().multiply(2));
         this.subatributos.setMovimento(this.subatributos.getMovimento().add(this.atributos.getDestreza().getPorcentagem()));
         this.subatributos.setMovimento(this.subatributos.getMovimento().divide(3));
+        //Precisao = (Forca + Destreza*2) / 3
+        this.subatributos.setPrecisao(this.atributos.getDestreza().getPorcentagem().multiply(2));
+        this.subatributos.setPrecisao(this.atributos.getForca().getPorcentagem().add(this.subatributos.getPrecisao()));
+        this.subatributos.setPrecisao(this.subatributos.getPrecisao().divide(3));
 
     }
 
