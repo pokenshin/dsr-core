@@ -194,5 +194,7 @@ public class SerTest {
         assertEquals(new ValorMag(60, 2), this.ser.getSubatributos().getMovimento());
         //Precisao = (Forca + Destreza*2) / 3
         assertEquals(new ValorMag(53, 2), this.ser.getSubatributos().getPrecisao());
+        //Raciocinio = (Intelecto + Criatividade) / 2
+        assertEquals(new ValorMag(55, 2), this.ser.getSubatributos().getRaciocinio());
     }
 }

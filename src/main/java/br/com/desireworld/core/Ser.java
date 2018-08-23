@@ -370,7 +370,9 @@ public class Ser {
         this.subatributos.setPrecisao(this.atributos.getDestreza().getPorcentagem().multiply(2));
         this.subatributos.setPrecisao(this.atributos.getForca().getPorcentagem().add(this.subatributos.getPrecisao()));
         this.subatributos.setPrecisao(this.subatributos.getPrecisao().divide(3));
-
+        //Raciocinio = (Intelecto + Criatividade) / 2
+        this.subatributos.setRaciocinio(this.atributos.getIntelecto().getPorcentagem().add((this.atributos.getCriatividade().getPorcentagem())));
+        this.subatributos.setRaciocinio(this.subatributos.getRaciocinio().divide(2));
     }
 
     public void calculaKarma() {
