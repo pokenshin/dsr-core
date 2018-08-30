@@ -137,6 +137,46 @@ public class SerTest {
     }
 
     @Test
+    public void calculaCerne(){
+        Especie especie = new Especie();
+        especie.setDestrias(new Intervalo<Integer>(1, 2));
+        Atributos atributos = new Atributos();
+        atributos.getForca().setVigor(new ValorMag(25, 2));
+        atributos.getForca().setSustentacao(new ValorMag(84, 2));
+        atributos.getForca().setPorcentagem(new ValorMag(25, 2));
+        atributos.getMateria().setVitalidade(new ValorMag(35, 2));
+        atributos.getMateria().setImpulso(new ValorMag(44, 2));
+        atributos.getMateria().setPontos(25);
+        atributos.getMateria().setPorcentagem(new ValorMag(25,2));
+        atributos.getDestreza().setCoordenacao(new ValorMag(36, 2));
+        atributos.getDestreza().setPontos(26);
+        atributos.getDestreza().setPorcentagem(new ValorMag(25,2));
+        atributos.getIntelecto().setPorcentagem(new ValorMag(25,2));
+        atributos.getCriatividade().setPorcentagem(new ValorMag(25,2));
+        atributos.getIdeia().setPorcentagem(new ValorMag(25,2));
+        atributos.getExistencia().setPorcentagem(new ValorMag(25,2));
+
+        ser.getIdentidade().getEspecies().add(especie);
+        ser.setAtributos(atributos);
+        this.ser.calculaCerne();
+
+        //Acao = (vigor + vitalidade + coordenação) / 3
+        assertEquals(new ValorMag(32, 2), this.ser.getCerne().getAcao());
+        //Altura = definido pelo usuário
+        //Carga = (impulso + sustentação) /2
+        assertEquals(new ValorMag(60, 2), this.ser.getCerne().getCarga());
+        //Comprimento = Pontos em matéria para ValorMag
+        assertEquals(new ValorMag(25, 2), this.ser.getCerne().getComprimento());
+        //Destria = Pontos Destreza / 10 (até o maximo da espécie)
+        assertEquals(2, this.ser.getCerne().getDestria());
+        //Essencia = média de todos os atributos
+        assertEquals(new ValorMag(22, 2), this.ser.getCerne().getEssencia());
+
+
+
+    }
+
+    @Test
     public void calculaSubatributos(){
         Atributos atributos = new Atributos();
         atributos.getMateria().setPorcentagem(new ValorMag(45, 2));

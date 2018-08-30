@@ -3,11 +3,11 @@ package br.com.desireworld.core.ser.atributos;
 import br.com.desireworld.core.ValorMag;
 
 public class Materia extends Atributo {
-    private ValorMag concentracao;
-    private ValorMag visualizacao;
-    private ValorMag aprendizagem;
-    private ValorMag senso;
-    private ValorMag eidos;
+    private ValorMag colapso;
+    private ValorMag impulso;
+    private ValorMag resistencia;
+    private ValorMag vitalidade;
+    private ValorMag regeneracao;
     private ValorMag bonusCP;
     private ValorMag bonusHP;
 
@@ -19,66 +19,66 @@ public class Materia extends Atributo {
         this.bonusHP = bonusHP;
     }
 
-    public Materia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag concentracao, ValorMag visualizacao, ValorMag aprendizagem, ValorMag senso, ValorMag eidos, ValorMag bonusCP, ValorMag bonusHP) {
+    public Materia(String classe, int nivel, int pontos, ValorMag porcentagem, Evolucao evolucao, ValorMag colapso, ValorMag impulso, ValorMag resistencia, ValorMag vitalidade, ValorMag regeneracao, ValorMag bonusCP, ValorMag bonusHP) {
         super(classe, nivel, pontos, porcentagem, evolucao);
-        this.concentracao = concentracao;
-        this.visualizacao = visualizacao;
-        this.aprendizagem = aprendizagem;
-        this.senso = senso;
-        this.eidos = eidos;
+        this.colapso = colapso;
+        this.impulso = impulso;
+        this.resistencia = resistencia;
+        this.vitalidade = vitalidade;
+        this.regeneracao = regeneracao;
         this.bonusCP = bonusCP;
         this.bonusHP = bonusHP;
     }
 
     public Materia() {
         super();
-        this.concentracao = new ValorMag();
-        this.visualizacao = new ValorMag();
-        this.aprendizagem = new ValorMag();
-        this.senso = new ValorMag();
-        this.eidos = new ValorMag();
+        this.colapso = new ValorMag();
+        this.impulso = new ValorMag();
+        this.resistencia = new ValorMag();
+        this.vitalidade = new ValorMag();
+        this.regeneracao = new ValorMag();
         this.bonusCP = new ValorMag();
         this.bonusHP = new ValorMag();
     }
 
-    public ValorMag getConcentracao() {
-        return concentracao;
+    public ValorMag getColapso() {
+        return colapso;
     }
 
-    public void setConcentracao(ValorMag concentracao) {
-        this.concentracao = concentracao;
+    public void setColapso(ValorMag colapso) {
+        this.colapso = colapso;
     }
 
-    public ValorMag getVisualizacao() {
-        return visualizacao;
+    public ValorMag getImpulso() {
+        return impulso;
     }
 
-    public void setVisualizacao(ValorMag visualizacao) {
-        this.visualizacao = visualizacao;
+    public void setImpulso(ValorMag impulso) {
+        this.impulso = impulso;
     }
 
-    public ValorMag getAprendizagem() {
-        return aprendizagem;
+    public ValorMag getResistencia() {
+        return resistencia;
     }
 
-    public void setAprendizagem(ValorMag aprendizagem) {
-        this.aprendizagem = aprendizagem;
+    public void setResistencia(ValorMag resistencia) {
+        this.resistencia = resistencia;
     }
 
-    public ValorMag getSenso() {
-        return senso;
+    public ValorMag getVitalidade() {
+        return vitalidade;
     }
 
-    public void setSenso(ValorMag senso) {
-        this.senso = senso;
+    public void setVitalidade(ValorMag vitalidade) {
+        this.vitalidade = vitalidade;
     }
 
-    public ValorMag getEidos() {
-        return eidos;
+    public ValorMag getRegeneracao() {
+        return regeneracao;
     }
 
-    public void setEidos(ValorMag eidos) {
-        this.eidos = eidos;
+    public void setRegeneracao(ValorMag regeneracao) {
+        this.regeneracao = regeneracao;
     }
 
     public ValorMag getBonusCP() {

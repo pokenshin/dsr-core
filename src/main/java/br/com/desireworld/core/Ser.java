@@ -319,7 +319,7 @@ public class Ser {
         this.calculaFe();
         this.calculaKarma();
         this.calculaSubatributos();
-//        this.calculaCerne();
+        this.calculaCerne();
 //        this.calculaIra();
 //        this.calculaForcaVontade();
 //        this.calculaPoderMaximo();
@@ -329,6 +329,38 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    public void calculaCerne() {
+        //Acao = (vigor + vitalidade + coordenação) / 3
+        this.cerne.setAcao(this.atributos.getForca().getVigor().add(this.atributos.getMateria().getVitalidade()));
+        this.cerne.setAcao(this.cerne.getAcao().add(this.atributos.getDestreza().getCoordenacao()));
+        this.cerne.setAcao(this.cerne.getAcao().divide(3));
+        //Carga = (impulso + sustentação) / 2
+        this.cerne.setCarga(this.atributos.getMateria().getImpulso().add(this.atributos.getForca().getSustentacao()));
+        this.cerne.setCarga(this.cerne.getCarga().divide(2));
+        //Comprimento = Pontos em matéria para ValorMag
+        this.cerne.setComprimento(new ValorMag(this.atributos.getMateria().getPontos()));
+        //Destria = Pontos Destreza / 10 (até o maximo da espécie)
+        if ((this.atributos.getDestreza().getPontos() / 10) > this.identidade.getEspecies().get(0).getDestrias().getMin()) {
+            this.cerne.setDestria(this.atributos.getDestreza().getPontos() / 10);
+        } else{
+            this.cerne.setDestria(this.identidade.getEspecies().get(0).getDestrias().getMin());
+        }
+        //Essência = Média de todos os atributos
+        this.cerne.setEssencia(this.atributos.getForca().getPorcentagem().add(this.atributos.getDestreza().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getMateria().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getIdeia().getPorcentagem()));
+        //Destria = Pontos Destreza / 10 (até o maximo da espécie)
+        this.cerne.setDestria(atributos.getDestreza().getPontos() / 10);
+        //Essencia = média de todos os atributos
+        this.cerne.setEssencia(this.atributos.getForca().getPorcentagem().add(this.atributos.getDestreza().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getMateria().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getIntelecto().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getCriatividade().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getIdeia().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getExistencia().getPorcentagem()));
+        this.cerne.setEssencia(this.cerne.getEssencia().divide(7));
     }
 
     public void calculaSubatributos() {
@@ -376,6 +408,7 @@ public class Ser {
         //Subconsciencia = (Existencia + Ideia) / 2
         this.subatributos.setSubconsciencia(this.atributos.getExistencia().getPorcentagem().add(this.atributos.getIdeia().getPorcentagem()));
         this.subatributos.setSubconsciencia(this.subatributos.getSubconsciencia().divide(2));
+
 
     }
 

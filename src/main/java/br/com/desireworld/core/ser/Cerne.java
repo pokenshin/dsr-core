@@ -7,7 +7,7 @@ public class Cerne {
     private ValorMag acao;
     private ValorMag reacao;
     private ValorMag turno;
-    private ValorMag destria;
+    private int destria;
     private ValorMag altura;
     private ValorMag largura;
     private ValorMag comprimento;
@@ -16,7 +16,7 @@ public class Cerne {
     private ValorMag tenacidade;
     private ValorMag essencia;
 
-    public Cerne(ValorMag iniciativa, ValorMag acao, ValorMag reacao, ValorMag turno, ValorMag destria, ValorMag altura, ValorMag largura, ValorMag comprimento, ValorMag carga, ValorMag massa, ValorMag tenacidade, ValorMag essencia) {
+    public Cerne(ValorMag iniciativa, ValorMag acao, ValorMag reacao, ValorMag turno, int destria, ValorMag altura, ValorMag largura, ValorMag comprimento, ValorMag carga, ValorMag massa, ValorMag tenacidade, ValorMag essencia) {
         this.iniciativa = iniciativa;
         this.acao = acao;
         this.reacao = reacao;
@@ -36,7 +36,7 @@ public class Cerne {
         this.acao = new ValorMag();
         this.reacao = new ValorMag();
         this.turno = new ValorMag();
-        this.destria = new ValorMag();
+        this.destria = 0;
         this.altura = new ValorMag();
         this.largura = new ValorMag();
         this.comprimento = new ValorMag();
@@ -78,11 +78,11 @@ public class Cerne {
         this.turno = turno;
     }
 
-    public ValorMag getDestria() {
+    public int getDestria() {
         return destria;
     }
 
-    public void setDestria(ValorMag destria) {
+    public void setDestria(int destria) {
         this.destria = destria;
     }
 
