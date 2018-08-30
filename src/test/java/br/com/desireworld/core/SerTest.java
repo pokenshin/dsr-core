@@ -180,6 +180,8 @@ public class SerTest {
         assertEquals(new ValorMag(36, 2), this.ser.getCerne().getIniciativa());
         //Massa = ((altura * comprimento) * largura ) *densidade da espécie
         assertEquals(new ValorMag(33, 6), this.ser.getCerne().getMassa());
+        //Reacao = (Vitalidade * coordenação) / 2
+        assertEquals(new ValorMag(35, 2), this.ser.getCerne().getReacao());
 
     }
 

@@ -368,6 +368,9 @@ public class Ser {
         this.cerne.setMassa(this.cerne.getAltura().multiply(this.cerne.getComprimento()));
         this.cerne.setMassa(this.cerne.getMassa().multiply(this.cerne.getLargura()));
         this.cerne.setMassa(this.cerne.getMassa().multiply(this.identidade.getEspecies().get(0).getDensidade()));
+        //Reacao = (Vitalidade + coordenação) / 2
+        this.cerne.setReacao(this.atributos.getMateria().getVitalidade().add(this.atributos.getDestreza().getCoordenacao()));
+        this.cerne.setReacao(this.cerne.getReacao().divide(2));
 
     }
 
