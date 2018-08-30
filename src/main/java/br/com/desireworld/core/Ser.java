@@ -361,6 +361,8 @@ public class Ser {
         this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getIdeia().getPorcentagem()));
         this.cerne.setEssencia(this.cerne.getEssencia().add(this.atributos.getExistencia().getPorcentagem()));
         this.cerne.setEssencia(this.cerne.getEssencia().divide(7));
+        //Iniciativa = Iniciativa da destreza
+        this.cerne.setIniciativa(this.atributos.getDestreza().getIniciativa());
     }
 
     public void calculaSubatributos() {

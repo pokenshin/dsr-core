@@ -151,6 +151,7 @@ public class SerTest {
         atributos.getDestreza().setCoordenacao(new ValorMag(36, 2));
         atributos.getDestreza().setPontos(26);
         atributos.getDestreza().setPorcentagem(new ValorMag(25,2));
+        atributos.getDestreza().setIniciativa(new ValorMag(36, 2));
         atributos.getIntelecto().setPorcentagem(new ValorMag(25,2));
         atributos.getCriatividade().setPorcentagem(new ValorMag(25,2));
         atributos.getIdeia().setPorcentagem(new ValorMag(25,2));
@@ -171,7 +172,8 @@ public class SerTest {
         assertEquals(2, this.ser.getCerne().getDestria());
         //Essencia = média de todos os atributos
         assertEquals(new ValorMag(22, 2), this.ser.getCerne().getEssencia());
-
+        //Iniciativa = Iniciativa da destreza
+        assertEquals(new ValorMag(36, 2), this.ser.getCerne().getIniciativa());
 
 
     }
