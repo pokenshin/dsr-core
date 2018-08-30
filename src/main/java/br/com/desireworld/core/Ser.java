@@ -363,6 +363,12 @@ public class Ser {
         this.cerne.setEssencia(this.cerne.getEssencia().divide(7));
         //Iniciativa = Iniciativa da destreza
         this.cerne.setIniciativa(this.atributos.getDestreza().getIniciativa());
+        //Largura = escolhido pelo usuário
+        //Massa = ((altura * comprimento) * largura ) *densidade da espécie
+        this.cerne.setMassa(this.cerne.getAltura().multiply(this.cerne.getComprimento()));
+        this.cerne.setMassa(this.cerne.getMassa().multiply(this.cerne.getLargura()));
+        this.cerne.setMassa(this.cerne.getMassa().multiply(this.identidade.getEspecies().get(0).getDensidade()));
+
     }
 
     public void calculaSubatributos() {

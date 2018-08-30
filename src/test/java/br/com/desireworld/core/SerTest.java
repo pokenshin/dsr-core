@@ -140,6 +140,7 @@ public class SerTest {
     public void calculaCerne(){
         Especie especie = new Especie();
         especie.setDestrias(new Intervalo<Integer>(1, 2));
+        especie.setDensidade(new ValorMag(30, 2));
         Atributos atributos = new Atributos();
         atributos.getForca().setVigor(new ValorMag(25, 2));
         atributos.getForca().setSustentacao(new ValorMag(84, 2));
@@ -157,8 +158,11 @@ public class SerTest {
         atributos.getIdeia().setPorcentagem(new ValorMag(25,2));
         atributos.getExistencia().setPorcentagem(new ValorMag(25,2));
 
-        ser.getIdentidade().getEspecies().add(especie);
-        ser.setAtributos(atributos);
+        this.ser.getIdentidade().getEspecies().add(especie);
+        this.ser.setAtributos(atributos);
+        this.ser.getCerne().setAltura(new ValorMag(18, 3));
+        this.ser.getCerne().setLargura(new ValorMag(25, 1));
+
         this.ser.calculaCerne();
 
         //Acao = (vigor + vitalidade + coordenação) / 3
@@ -174,7 +178,8 @@ public class SerTest {
         assertEquals(new ValorMag(22, 2), this.ser.getCerne().getEssencia());
         //Iniciativa = Iniciativa da destreza
         assertEquals(new ValorMag(36, 2), this.ser.getCerne().getIniciativa());
-
+        //Massa = ((altura * comprimento) * largura ) *densidade da espécie
+        assertEquals(new ValorMag(33, 6), this.ser.getCerne().getMassa());
 
     }
 
