@@ -138,15 +138,24 @@ public class SerTest {
 
     @Test
     public void calculaCerne(){
-        Especie especie = new Especie();
-        especie.setDestrias(new Intervalo<Integer>(1, 2));
-        especie.setDensidade(new ValorMag(30, 2));
+        Especie especieUm = new Especie();
+        especieUm.setDestrias(new Intervalo<Integer>(1, 2));
+        especieUm.setDensidade(new ValorMag(30, 2));
+        especieUm.setTurno(new Intervalo<Integer>(1, 3));
+        this.ser.getIdentidade().getEspecies().add(especieUm);
+
+        Especie especieDois = new Especie();
+        especieDois.setTurno(new Intervalo<Integer>(1, 20));
+        this.ser.getIdentidade().getEspecies().add(especieDois);
+
         Atributos atributos = new Atributos();
         atributos.getForca().setVigor(new ValorMag(25, 2));
         atributos.getForca().setSustentacao(new ValorMag(84, 2));
+        atributos.getForca().setDureza(new ValorMag(75, 2));
         atributos.getForca().setPorcentagem(new ValorMag(25, 2));
         atributos.getMateria().setVitalidade(new ValorMag(35, 2));
         atributos.getMateria().setImpulso(new ValorMag(44, 2));
+        atributos.getMateria().setResistencia(new ValorMag(25, 2));
         atributos.getMateria().setPontos(25);
         atributos.getMateria().setPorcentagem(new ValorMag(25,2));
         atributos.getDestreza().setCoordenacao(new ValorMag(36, 2));
@@ -158,7 +167,6 @@ public class SerTest {
         atributos.getIdeia().setPorcentagem(new ValorMag(25,2));
         atributos.getExistencia().setPorcentagem(new ValorMag(25,2));
 
-        this.ser.getIdentidade().getEspecies().add(especie);
         this.ser.setAtributos(atributos);
         this.ser.getCerne().setAltura(new ValorMag(18, 3));
         this.ser.getCerne().setLargura(new ValorMag(25, 1));
@@ -180,8 +188,12 @@ public class SerTest {
         assertEquals(new ValorMag(36, 2), this.ser.getCerne().getIniciativa());
         //Massa = ((altura * comprimento) * largura ) *densidade da espécie
         assertEquals(new ValorMag(33, 6), this.ser.getCerne().getMassa());
-        //Reacao = (Vitalidade * coordenação) / 2
+        //Reacao = (Vitalidade + coordenação) / 2
         assertEquals(new ValorMag(35, 2), this.ser.getCerne().getReacao());
+        //Tenacidade = (Dureza + Resistêcia) /2
+        assertEquals(new ValorMag(50, 2), this.ser.getCerne().getTenacidade());
+        //Turno = valor minimo da especie dominante + 20% da maior especie
+        assertEquals(5, this.ser.getCerne().getTurno());
 
     }
 

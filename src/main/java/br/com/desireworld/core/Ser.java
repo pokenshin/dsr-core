@@ -371,6 +371,15 @@ public class Ser {
         //Reacao = (Vitalidade + coordenação) / 2
         this.cerne.setReacao(this.atributos.getMateria().getVitalidade().add(this.atributos.getDestreza().getCoordenacao()));
         this.cerne.setReacao(this.cerne.getReacao().divide(2));
+        //Tenacidade = (Dureza + Resistêcia) /2
+        this.cerne.setTenacidade(this.atributos.getForca().getDureza().add(this.atributos.getMateria().getResistencia()));
+        this.cerne.setTenacidade(this.cerne.getTenacidade().divide(2));
+        //Turno = valor minimo da especie dominante + 20% da maior especie
+        this.cerne.setTurno(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getTurno().getMax())
+                .collect(Collectors.toList())));
+        this.cerne.setTurno((int)Math.round(cerne.getTurno() * 0.2));
+        this.cerne.setTurno(this.cerne.getTurno() + this.identidade.getEspecies().get(0).getTurno().getMin());
 
     }
 

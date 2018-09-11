@@ -6,7 +6,7 @@ public class Cerne {
     private ValorMag iniciativa;
     private ValorMag acao;
     private ValorMag reacao;
-    private ValorMag turno;
+    private int turno;
     private int destria;
     private ValorMag altura;
     private ValorMag largura;
@@ -16,7 +16,7 @@ public class Cerne {
     private ValorMag tenacidade;
     private ValorMag essencia;
 
-    public Cerne(ValorMag iniciativa, ValorMag acao, ValorMag reacao, ValorMag turno, int destria, ValorMag altura, ValorMag largura, ValorMag comprimento, ValorMag carga, ValorMag massa, ValorMag tenacidade, ValorMag essencia) {
+    public Cerne(ValorMag iniciativa, ValorMag acao, ValorMag reacao, int turno, int destria, ValorMag altura, ValorMag largura, ValorMag comprimento, ValorMag carga, ValorMag massa, ValorMag tenacidade, ValorMag essencia) {
         this.iniciativa = iniciativa;
         this.acao = acao;
         this.reacao = reacao;
@@ -35,7 +35,7 @@ public class Cerne {
         this.iniciativa = new ValorMag();
         this.acao = new ValorMag();
         this.reacao = new ValorMag();
-        this.turno = new ValorMag();
+        this.turno = 0;
         this.destria = 0;
         this.altura = new ValorMag();
         this.largura = new ValorMag();
@@ -70,11 +70,11 @@ public class Cerne {
         this.reacao = reacao;
     }
 
-    public ValorMag getTurno() {
+    public int getTurno() {
         return turno;
     }
 
-    public void setTurno(ValorMag turno) {
+    public void setTurno(int turno) {
         this.turno = turno;
     }
 
