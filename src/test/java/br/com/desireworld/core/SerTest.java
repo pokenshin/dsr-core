@@ -275,4 +275,20 @@ public class SerTest {
         this.ser.calculaIra();
         assertEquals(5, this.ser.getIra());
     }
+
+    @Test
+    public void calculaForcaVontade(){
+        Especie especieUm = new Especie();
+        Especie especieDois = new Especie();
+        Especie especieTres = new Especie();
+        especieUm.setForcaVontade(new Intervalo<Integer>(2, 6));
+        especieDois.setForcaVontade(new Intervalo<Integer>(5, 7));
+        especieTres.setForcaVontade(new Intervalo<Integer>(10, 15));
+        this.ser.getIdentidade().getEspecies().add(especieUm);
+        this.ser.getIdentidade().getEspecies().add(especieDois);
+        this.ser.getIdentidade().getEspecies().add(especieTres);
+
+        this.ser.calculaForcaVontade();
+        assertEquals(10, this.ser.getForcaVontade());
+    }
 }

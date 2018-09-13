@@ -321,7 +321,7 @@ public class Ser {
         this.calculaSubatributos();
         this.calculaCerne();
         this.calculaIra();
-//        this.calculaForcaVontade();
+        this.calculaForcaVontade();
 //        this.calculaPoderMaximo();
 //        this.calculaResposta();
 //        this.calculaFugacidade();
@@ -329,6 +329,14 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    //ForcaVontade = Máximo do mínimo das espécies
+    public void calculaForcaVontade() {
+        this.setForcaVontade(getMax(this.identidade.getEspecies().stream()
+            .map(e -> e.getForcaVontade().getMin())
+            .collect(Collectors.toList())
+        ));
     }
 
     //Ira = Máximo do mínimo das espécies
