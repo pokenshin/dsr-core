@@ -307,4 +307,28 @@ public class SerTest {
         this.ser.calculaPoderMaximo();
         assertEquals(9, this.ser.getPoderMaximo());
     }
+
+    @Test
+    public void calculaResposta(){
+        Especie especie = new Especie();
+        Resposta respostaMin = new Resposta(
+                new ValorMag(10, 5),
+                new ValorMag(15, 5),
+                new ValorMag(20, 5),
+                new ValorMag(25, 5),
+                new ValorMag(30, 5),
+                new ValorMag(35, 5),
+                new ValorMag(40, 5));
+        Intervalo resposta = new Intervalo(respostaMin, new Resposta());
+        especie.setResposta(resposta);
+        this.ser.getIdentidade().getEspecies().add(especie);
+        this.ser.calculaResposta();
+        assertEquals(new ValorMag(10, 5), this.ser.getResposta().getDesespero());
+        assertEquals(new ValorMag(15, 5), this.ser.getResposta().getPanico());
+        assertEquals(new ValorMag(20, 5), this.ser.getResposta().getMedo());
+        assertEquals(new ValorMag(25, 5), this.ser.getResposta().getIndiferenca());
+        assertEquals(new ValorMag(30, 5), this.ser.getResposta().getCoragem());
+        assertEquals(new ValorMag(35, 5), this.ser.getResposta().getBravura());
+        assertEquals(new ValorMag(40, 5), this.ser.getResposta().getHeroismo());
+    }
 }

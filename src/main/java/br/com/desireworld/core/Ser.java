@@ -637,4 +637,16 @@ public class Ser {
         }
     }
 
+    //Resposta = mínimo da espécie principal
+    public void calculaResposta() {
+        Resposta resposta = new Resposta();
+        resposta.setBravura(this.identidade.getEspecies().get(0).getResposta().getMin().getBravura());
+        resposta.setCoragem(this.identidade.getEspecies().get(0).getResposta().getMin().getCoragem());
+        resposta.setDesespero(this.identidade.getEspecies().get(0).getResposta().getMin().getDesespero());
+        resposta.setHeroismo(this.identidade.getEspecies().get(0).getResposta().getMin().getHeroismo());
+        resposta.setIndiferenca(this.identidade.getEspecies().get(0).getResposta().getMin().getIndiferenca());
+        resposta.setMedo(this.identidade.getEspecies().get(0).getResposta().getMin().getMedo());
+        resposta.setPanico(this.identidade.getEspecies().get(0).getResposta().getMin().getPanico());
+        this.setResposta(resposta);
+    }
 }
