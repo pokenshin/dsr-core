@@ -194,7 +194,6 @@ public class SerTest {
         assertEquals(new ValorMag(50, 2), this.ser.getCerne().getTenacidade());
         //Turno = valor minimo da especie dominante + 20% da maior especie
         assertEquals(5, this.ser.getCerne().getTurno());
-
     }
 
     @Test
@@ -259,6 +258,21 @@ public class SerTest {
         assertEquals(new ValorMag(55, 2), this.ser.getSubatributos().getRaciocinio());
         //Subconsciencia = (Existencia + Ideia) / 2
         assertEquals(new ValorMag(38, 2), this.ser.getSubatributos().getSubconsciencia());
+    }
 
+    @Test
+    public void calculaIra(){
+        Especie especieUm = new Especie();
+        Especie especieDois = new Especie();
+        Especie especieTres = new Especie();
+        especieUm.setIra(new Intervalo<Integer>(0, 5));
+        especieDois.setIra(new Intervalo<Integer>(5, 10));
+        especieTres.setIra(new Intervalo<Integer>(3, 10));
+        this.ser.getIdentidade().getEspecies().add(especieUm);
+        this.ser.getIdentidade().getEspecies().add(especieDois);
+        this.ser.getIdentidade().getEspecies().add(especieTres);
+
+        this.ser.calculaIra();
+        assertEquals(5, this.ser.getIra());
     }
 }

@@ -320,7 +320,7 @@ public class Ser {
         this.calculaKarma();
         this.calculaSubatributos();
         this.calculaCerne();
-//        this.calculaIra();
+        this.calculaIra();
 //        this.calculaForcaVontade();
 //        this.calculaPoderMaximo();
 //        this.calculaResposta();
@@ -329,6 +329,14 @@ public class Ser {
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    //Ira = Máximo do mínimo das espécies
+    public void calculaIra() {
+        this.setIra(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getIra().getMin())
+                .collect(Collectors.toList())
+        ));
     }
 
     public void calculaCerne() {
@@ -428,8 +436,6 @@ public class Ser {
         //Subconsciencia = (Existencia + Ideia) / 2
         this.subatributos.setSubconsciencia(this.atributos.getExistencia().getPorcentagem().add(this.atributos.getIdeia().getPorcentagem()));
         this.subatributos.setSubconsciencia(this.subatributos.getSubconsciencia().divide(2));
-
-
     }
 
     public void calculaKarma() {
