@@ -291,4 +291,20 @@ public class SerTest {
         this.ser.calculaForcaVontade();
         assertEquals(10, this.ser.getForcaVontade());
     }
+
+    @Test
+    public void calculaPoderMaximo(){
+        Especie especieUm = new Especie();
+        Especie especieDois = new Especie();
+        Especie especieTres = new Especie();
+        especieUm.setPoderMaximo(new Intervalo<Integer>(3, 6));
+        especieDois.setPoderMaximo(new Intervalo<Integer>(6, 12));
+        especieTres.setPoderMaximo(new Intervalo<Integer>(9, 18));
+        this.ser.getIdentidade().getEspecies().add(especieUm);
+        this.ser.getIdentidade().getEspecies().add(especieDois);
+        this.ser.getIdentidade().getEspecies().add(especieTres);
+
+        this.ser.calculaPoderMaximo();
+        assertEquals(9, this.ser.getPoderMaximo());
+    }
 }

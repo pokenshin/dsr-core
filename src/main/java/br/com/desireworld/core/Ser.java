@@ -322,13 +322,21 @@ public class Ser {
         this.calculaCerne();
         this.calculaIra();
         this.calculaForcaVontade();
-//        this.calculaPoderMaximo();
+        this.calculaPoderMaximo();
 //        this.calculaResposta();
 //        this.calculaFugacidade();
 //        this.calculaModificadoresAtivos();
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    //PoderMaximo = Maximo do minimo das espécies
+    public void calculaPoderMaximo() {
+        this.setPoderMaximo(getMax(this.identidade.getEspecies().stream()
+                .map(e -> e.getPoderMaximo().getMin())
+                .collect(Collectors.toList())
+        ));
     }
 
     //ForcaVontade = Máximo do mínimo das espécies
