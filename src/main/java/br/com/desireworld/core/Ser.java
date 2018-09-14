@@ -323,12 +323,19 @@ public class Ser {
         this.calculaIra();
         this.calculaForcaVontade();
         this.calculaPoderMaximo();
-//        this.calculaResposta();
-//        this.calculaFugacidade();
+        this.calculaResposta();
+        this.calculaFugacidade();
 //        this.calculaModificadoresAtivos();
 //        this.calculaMagnitude();
 //        this.calculaEnergias();
 //        this.calculaExperiencia();
+    }
+
+    //Lista todas as habilidades do tipo Fugacidade
+    public void calculaFugacidade() {
+        this.setFugacidade(this.habilidades.stream()
+                .filter(h -> h.getTipo().getNome() == "Fugacidade")
+                .collect(Collectors.toList()));
     }
 
     //PoderMaximo = Maximo do minimo das espécies

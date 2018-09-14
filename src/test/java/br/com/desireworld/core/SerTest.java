@@ -2,6 +2,7 @@ package br.com.desireworld.core;
 
 import br.com.desireworld.core.ser.*;
 import br.com.desireworld.core.ser.acoes.Habilidade;
+import br.com.desireworld.core.ser.acoes.TipoAcao;
 import br.com.desireworld.core.ser.atributos.Atributos;
 import org.junit.Before;
 import org.junit.Test;
@@ -330,5 +331,21 @@ public class SerTest {
         assertEquals(new ValorMag(30, 5), this.ser.getResposta().getCoragem());
         assertEquals(new ValorMag(35, 5), this.ser.getResposta().getBravura());
         assertEquals(new ValorMag(40, 5), this.ser.getResposta().getHeroismo());
+    }
+
+    @Test
+    public void calculaFugacidade(){
+        Habilidade habilidadeUm = new Habilidade();
+        habilidadeUm.setTipo(new TipoAcao(1, "Fugacidade"));
+        ser.getHabilidades().add(habilidadeUm);
+        Habilidade habilidadeDois = new Habilidade();
+        habilidadeDois.setTipo(new TipoAcao(1, "Fugacidade"));
+        ser.getHabilidades().add(habilidadeDois);
+        Habilidade habilidadeTres = new Habilidade();
+        ser.getHabilidades().add(habilidadeTres);
+
+        ser.calculaFugacidade();
+
+        assertEquals(2, this.ser.getFugacidade().size());
     }
 }
