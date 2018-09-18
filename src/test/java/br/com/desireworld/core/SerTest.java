@@ -337,15 +337,52 @@ public class SerTest {
     public void calculaFugacidade(){
         Habilidade habilidadeUm = new Habilidade();
         habilidadeUm.setTipo(new TipoAcao(1, "Fugacidade"));
-        ser.getHabilidades().add(habilidadeUm);
+        this.ser.getHabilidades().add(habilidadeUm);
         Habilidade habilidadeDois = new Habilidade();
         habilidadeDois.setTipo(new TipoAcao(1, "Fugacidade"));
-        ser.getHabilidades().add(habilidadeDois);
+        this.ser.getHabilidades().add(habilidadeDois);
         Habilidade habilidadeTres = new Habilidade();
-        ser.getHabilidades().add(habilidadeTres);
+        this.ser.getHabilidades().add(habilidadeTres);
 
-        ser.calculaFugacidade();
+        this.ser.calculaFugacidade();
 
         assertEquals(2, this.ser.getFugacidade().size());
+    }
+
+    @Test
+    public void calculaMagnitudeSemReis(){
+        this.ser.getAtributos().getForca().getPorcentagem().setMag(2);
+        this.ser.getAtributos().getDestreza().getPorcentagem().setMag(3);
+        this.ser.getAtributos().getMateria().getPorcentagem().setMag(4);
+        this.ser.getAtributos().getIntelecto().getPorcentagem().setMag(5);
+        this.ser.getAtributos().getCriatividade().getPorcentagem().setMag(6);
+        this.ser.getAtributos().getIdeia().getPorcentagem().setMag(7);
+        this.ser.getAtributos().getExistencia().getPorcentagem().setMag(8);
+
+        this.ser.calculaMagnitude();
+
+        assertEquals(5, this.ser.getIdentidade().getMagnitude());
+    }
+
+    @Test
+    public void calculaEnergias(){
+        Especie especieUm = new Especie();
+        especieUm.getEnergias().add(new Energia(1, "", "", 100, 100));
+        especieUm.getEnergias().add(new Energia(3, "", "", 200, 200));
+        especieUm.getEnergias().add(new Energia(5, "", "", 300, 300));
+        this.ser.getIdentidade().getEspecies().add(especieUm);
+
+        Especie especieDois = new Especie();
+        especieDois.getEnergias().add(new Energia(1, "", "", 20, 20));
+        especieDois.getEnergias().add(new Energia(3, "", "", 30, 30));
+        especieDois.getEnergias().add(new Energia(4, "", "", 50, 50));
+        this.ser.getIdentidade().getEspecies().add(especieDois);
+
+        this.ser.calculaEnergias();
+
+        assertEquals(120, this.ser.getEnergiaById(1).getMaximo());
+        assertEquals(230, this.ser.getEnergiaById(3).getMaximo());
+        assertEquals(50, this.ser.getEnergiaById(4).getMaximo());
+        assertEquals(300, this.ser.getEnergiaById(5).getMaximo());
     }
 }

@@ -6,14 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" line="17" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" line="47" />
+    <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" line="19" />
     <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/ValorMagTest.java" />
     <bookmark url="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f27adf1-8206-45d7-8b7b-bd5f967dd35b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Energia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Energia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" afterDir="false" />
     </list>
@@ -28,11 +28,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="639" column="44" selection-start-line="639" selection-start-column="44" selection-end-line="639" selection-end-column="44" />
+            <state relative-caret-position="232">
+              <caret line="351" selection-start-line="351" selection-end-line="351" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4887#4888#0" expanded="true" />
+                <element signature="e#4920#4921#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Especie.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Especie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="224" selection-start-line="224" selection-end-line="224" />
+              <folding>
+                <element signature="e#8157#8158#0" expanded="true" />
+                <element signature="e#13144#13145#0" expanded="true" />
+                <element signature="e#13184#13185#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Identidade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Identidade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="e#1934#1935#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Energia.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Energia.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
+              <folding>
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#1297#1298#0" expanded="true" />
+                <element signature="e#1365#1366#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,17 +86,8 @@
       <file leaf-file-name="SerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="324" column="28" selection-start-line="324" selection-start-column="28" selection-end-line="324" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resposta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Resposta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="298">
+              <caret line="376" column="45" lean-forward="true" selection-start-line="376" selection-start-column="45" selection-end-line="376" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -71,6 +108,8 @@
       <find>collector</find>
       <find>stream</find>
       <find>map</find>
+      <find>filter</find>
+      <find>energia</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/itens/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/itens/Consumivel.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/itens/Equipamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/itens/Material.java" />
@@ -133,8 +171,9 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Subatributos.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/atributos/Materia.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Cerne.java" />
-        <option value="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Energia.java" />
       </list>
     </option>
   </component>
@@ -157,7 +196,48 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dsr-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dsr-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dsr-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dsr-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dsr-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dsr-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dsr-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dsr-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dsr-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dsr-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -191,11 +271,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SerTest.calculaResposta">
+  <component name="RunManager" selected="JUnit.SerTest.calculaEnergias">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="SerTest.calculaCerne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SerTest.calculaEnergias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dsr-core" />
       <extension name="coverage">
         <pattern>
@@ -207,7 +287,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
       <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
-      <option name="METHOD_NAME" value="calculaCerne" />
+      <option name="METHOD_NAME" value="calculaEnergias" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -241,7 +321,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="SerTest.calculaIra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SerTest.calculaFugacidade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dsr-core" />
       <extension name="coverage">
         <pattern>
@@ -253,7 +333,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="br.com.desireworld.core" />
       <option name="MAIN_CLASS_NAME" value="br.com.desireworld.core.SerTest" />
-      <option name="METHOD_NAME" value="calculaIra" />
+      <option name="METHOD_NAME" value="calculaFugacidade" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -349,19 +429,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.SerTest.calculaCerne" />
-      <item itemvalue="JUnit.SerTest.calculaIra" />
       <item itemvalue="JUnit.SerTest.calculaForcaVontade" />
       <item itemvalue="JUnit.SerTest.calculaPoderMaximo" />
       <item itemvalue="JUnit.SerTest.calculaResposta" />
+      <item itemvalue="JUnit.SerTest.calculaFugacidade" />
+      <item itemvalue="JUnit.SerTest.calculaEnergias" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SerTest.calculaEnergias" />
+        <item itemvalue="JUnit.SerTest.calculaFugacidade" />
         <item itemvalue="JUnit.SerTest.calculaResposta" />
         <item itemvalue="JUnit.SerTest.calculaPoderMaximo" />
         <item itemvalue="JUnit.SerTest.calculaForcaVontade" />
-        <item itemvalue="JUnit.SerTest.calculaIra" />
-        <item itemvalue="JUnit.SerTest.calculaCerne" />
       </list>
     </recent_temporary>
   </component>
@@ -604,39 +684,53 @@
       <option name="project" value="LOCAL" />
       <updated>1536842473052</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Cálculo e testes de Resposta">
+      <created>1536845993644</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1536845993644</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Cálculo e testes de Fugacidade">
+      <created>1536927989611</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1536927989611</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SerTest_calculaCerne - 2018.08.30 at 14h 15m 38s.xml">
-      <configuration name="SerTest.calculaCerne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaCerne - 2018.08.30 at 14h 15m 55s.xml">
-      <configuration name="SerTest.calculaCerne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaCerne - 2018.08.30 at 14h 25m 38s.xml">
-      <configuration name="SerTest.calculaCerne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaCerne - 2018.08.31 at 14h 21m 51s.xml">
-      <configuration name="SerTest.calculaCerne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaCerne - 2018.09.11 at 13h 06m 26s.xml">
-      <configuration name="SerTest.calculaCerne" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaIra - 2018.09.13 at 09h 29m 57s.xml">
-      <configuration name="SerTest.calculaIra" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaForcaVontade - 2018.09.13 at 09h 34m 37s.xml">
-      <configuration name="SerTest.calculaForcaVontade" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaForcaVontade - 2018.09.13 at 09h 35m 12s.xml">
-      <configuration name="SerTest.calculaForcaVontade" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SerTest_calculaForcaVontade - 2018.09.13 at 09h 35m 31s.xml">
-      <configuration name="SerTest.calculaForcaVontade" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SerTest_calculaPoderMaximo - 2018.09.13 at 09h 40m 37s.xml">
       <configuration name="SerTest.calculaPoderMaximo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaResposta - 2018.09.13 at 10h 39m 39s.xml">
+      <configuration name="SerTest.calculaResposta" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaFugacidade - 2018.09.14 at 09h 25m 13s.xml">
+      <configuration name="SerTest.calculaFugacidade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaFugacidade - 2018.09.14 at 09h 25m 29s.xml">
+      <configuration name="SerTest.calculaFugacidade" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 14h 36m 23s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 14h 38m 09s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 15h 27m 30s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 15h 42m 11s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 15h 42m 21s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SerTest_calculaEnergias - 2018.09.18 at 15h 43m 09s.xml">
+      <configuration name="SerTest.calculaEnergias" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -651,19 +745,19 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32755905" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32913387" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2057101" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2057101" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44409448" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.30393702" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -675,14 +769,14 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290938" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2057101" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290938" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -706,8 +800,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Cálculo de Habilidades e Testes Unitários" />
-    <MESSAGE value="Commit de backup" />
     <MESSAGE value="Cálculo de cansaço dentro do ser (TODO: Unit tests)" />
     <MESSAGE value="Testes unitários do cálculo de Cansaço" />
     <MESSAGE value="Cálculo e testes de Comportamento" />
@@ -731,7 +823,9 @@
     <MESSAGE value="Cálculo e testes de Cerne - Turno" />
     <MESSAGE value="Cálculo e testes de Ira" />
     <MESSAGE value="Cálculo e testes de Força de Vontade" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cálculo e testes de Força de Vontade" />
+    <MESSAGE value="Cálculo e testes de Resposta" />
+    <MESSAGE value="Cálculo e testes de Fugacidade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cálculo e testes de Fugacidade" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -739,15 +833,34 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java</url>
-          <line>119</line>
+          <line>121</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="69" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5763">
+          <caret line="339" lean-forward="true" selection-start-line="339" selection-end-line="339" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
+            <element signature="e#4920#4921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5678">
@@ -776,17 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Especie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="451" column="44" lean-forward="true" selection-start-line="451" selection-start-column="44" selection-end-line="451" selection-end-column="44" />
-          <folding>
-            <element signature="e#13144#13145#0" expanded="true" />
-            <element signature="e#13184#13185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Resposta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -794,17 +896,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/acoes/TipoAcao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="324" column="28" selection-start-line="324" selection-start-column="28" selection-end-line="324" selection-end-column="28" />
+        <state relative-caret-position="187">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Identidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="e#1934#1935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/ser/Especie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <folding>
+            <element signature="e#8157#8158#0" expanded="true" />
+            <element signature="e#13144#13145#0" expanded="true" />
+            <element signature="e#13184#13185#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Ser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="639" column="44" selection-start-line="639" selection-start-column="44" selection-end-line="639" selection-end-column="44" />
+        <state relative-caret-position="232">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4887#4888#0" expanded="true" />
+            <element signature="e#4920#4921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/br/com/desireworld/core/SerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="376" column="45" lean-forward="true" selection-start-line="376" selection-start-column="45" selection-end-line="376" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/desireworld/core/Energia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
+          <folding>
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

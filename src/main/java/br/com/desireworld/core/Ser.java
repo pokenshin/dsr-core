@@ -42,7 +42,7 @@ public class Ser {
     public Ser() {
         this.identidade = new Identidade();
         this.atributos = new Atributos();
-        this.energias = new ArrayList<>();
+        this.criaEnergias();
         this.especial = 0;
         this.deslocamentos = new ArrayList<>();
         this.subatributos = new Subatributos();
@@ -325,10 +325,56 @@ public class Ser {
         this.calculaPoderMaximo();
         this.calculaResposta();
         this.calculaFugacidade();
-//        this.calculaModificadoresAtivos();
-//        this.calculaMagnitude();
-//        this.calculaEnergias();
+        this.calculaMagnitude();
+        this.calculaEnergias();
+//      this.calculaModificadoresAtivos();
+
+
 //        this.calculaExperiencia();
+    }
+
+    public Energia getEnergiaById(int id){
+        return this.energias.stream()
+                .filter(e -> e.getId() == id )
+                .findFirst()
+                .get();
+    }
+
+    // Pega todas as energias das espécies
+    // Calcula a quantidade de cada uma das energias
+    // TODO: Refatorar para ficar melhor
+    public void calculaEnergias() {
+        //Energias: "AP", "CP", "EP", "HP", "MP", "QP", "SP", "PE", "PA";
+        for (Especie especie: this.getIdentidade().getEspecies()){
+            for(Energia energia: especie.getEnergias()){
+                long valor = this.getEnergiaById(energia.getId()).getMaximo();
+                this.energias.stream().filter(e -> e.getId() == energia.getId()).findFirst().get().setQuantidade(valor + energia.getQuantidade());
+                this.energias.stream().filter(e -> e.getId() == energia.getId()).findFirst().get().setMaximo(valor + energia.getQuantidade());
+            }
+        }
+    }
+
+    private void criaEnergias(){
+        this.energias = new ArrayList<>();
+        this.energias.add(new Energia(1, "AP", "Action Points", 0, 0));
+        this.energias.add(new Energia(2, "CP", "Constitution Points", 0, 0));
+        this.energias.add(new Energia(3, "EP", "Espirito Points", 0, 0));
+        this.energias.add(new Energia(4, "HP", "Hit Points", 0, 0));
+        this.energias.add(new Energia(5, "MP", "Magic Points", 0, 0));
+        this.energias.add(new Energia(6, "QP", "Quintessential Points", 0, 0));
+        this.energias.add(new Energia(7, "SP", "Spirit Points", 0,0));
+        this.energias.add(new Energia(8, "PE", "Points", 0,0));
+        this.energias.add(new Energia(9,"PA", "Paradigma Points", 0,0));
+    }
+
+    //Magnitude média dos atributos
+    //Pega magnitude do Rei se for maior que a média dos atributos
+    public void calculaMagnitude() {
+        int magTotal = this.atributos.getForca().getPorcentagem().getMag() + this.atributos.getDestreza().getPorcentagem().getMag() + this.atributos.getMateria().getPorcentagem().getMag() + this.atributos.getExistencia().getPorcentagem().getMag() + this.atributos.getIdeia().getPorcentagem().getMag() + this.atributos.getCriatividade().getPorcentagem().getMag() + this.atributos.getIntelecto().getPorcentagem().getMag();
+        magTotal /= 7;
+        int magReis = getMax(this.identidade.getReis().stream().map(r -> r.getMagnitude()).collect(Collectors.toList()));
+        this.identidade.setMagnitude(Math.max(magTotal, magReis));
+
     }
 
     //Lista todas as habilidades do tipo Fugacidade
