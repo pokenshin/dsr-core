@@ -385,4 +385,19 @@ public class SerTest {
         assertEquals(50, this.ser.getEnergiaById(4).getMaximo());
         assertEquals(300, this.ser.getEnergiaById(5).getMaximo());
     }
+
+    //Pontos de Graduação (G) = 10^Magnitude do Personagem
+    //Pontos de Evolução (En) = Nivel * G
+    //Experiência Total (XPn) = (G*(nivel^2 - nivel)) / 2
+    @Test
+    public void calculaExperiencia(){
+        this.ser.getIdentidade().setMagnitude(3);
+        this.ser.getIdentidade().setNivel(15);
+        this.ser.calculaExperiencia();
+
+        assertEquals(1000, this.ser.getExperiencia().getPontosGraduacao());
+        assertEquals(15000, this.ser.getExperiencia().getPontosEvolucao());
+        assertEquals(105000, this.ser.getExperiencia().getExperienciaAtual());
+
+    }
 }

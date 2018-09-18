@@ -328,9 +328,16 @@ public class Ser {
         this.calculaMagnitude();
         this.calculaEnergias();
 //      this.calculaModificadoresAtivos();
+        this.calculaExperiencia();
+    }
 
-
-//        this.calculaExperiencia();
+    //Pontos de Graduação (G) = 10^Magnitude do Personagem
+    //Pontos de Evolução (En) = Nivel * G
+    //Experiência Total (XPn) = (G*(nivel^2 - nivel)) / 2
+    public void calculaExperiencia() {
+        this.getExperiencia().setPontosGraduacao((long)Math.pow(10,this.identidade.getMagnitude()));
+        this.getExperiencia().setPontosEvolucao(this.experiencia.getPontosGraduacao() * this.identidade.getNivel());
+        this.getExperiencia().setExperienciaAtual((this.experiencia.getPontosGraduacao() * ((long)(Math.pow(this.identidade.getNivel(),2)-(long)this.identidade.getNivel()))/ 2));
     }
 
     public Energia getEnergiaById(int id){
