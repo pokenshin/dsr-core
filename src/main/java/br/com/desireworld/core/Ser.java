@@ -23,7 +23,6 @@ public class Ser {
     private List<Pericia> pericias;
     private List<Habilidade> fugacidade;
     private List<Habilidade> habilidades;
-    private List<Habilidade> arcanidades;
     private List<Tecnica> tecnicas;
     private Resposta resposta;
     private int forcaVontade;
@@ -50,7 +49,6 @@ public class Ser {
         this.pericias = new ArrayList<>();
         this.fugacidade = new ArrayList<>();
         this.habilidades = new ArrayList<>();
-        this.arcanidades = new ArrayList<>();
         this.tecnicas = new ArrayList<>();
         this.resposta = new Resposta();
         this.forcaVontade = 0;
@@ -88,7 +86,7 @@ public class Ser {
         this.modificadoresAtivos = modificadoresAtivos;
     }
 
-    public Ser(Identidade identidade, Atributos atributos, List<Energia> energias, int especial, List<Deslocamento> deslocamentos, Subatributos subatributos, Cerne cerne, List<Pericia> pericias, List<Habilidade> fugacidade, List<Habilidade> habilidades, List<Habilidade> arcanidades, List<Tecnica> tecnicas, Resposta resposta, int forcaVontade, int ira, int poderMaximo, List<String> estimulos, List<Elemento> elementos, Experiencia experiencia, List<Equipamento> itensEquipados, List<Item> posses, Elo elo) {
+    public Ser(Identidade identidade, Atributos atributos, List<Energia> energias, int especial, List<Deslocamento> deslocamentos, Subatributos subatributos, Cerne cerne, List<Pericia> pericias, List<Habilidade> fugacidade, List<Habilidade> habilidades, List<Tecnica> tecnicas, Resposta resposta, int forcaVontade, int ira, int poderMaximo, List<String> estimulos, List<Elemento> elementos, Experiencia experiencia, List<Equipamento> itensEquipados, List<Item> posses, Elo elo) {
         this.identidade = identidade;
         this.atributos = atributos;
         this.energias = energias;
@@ -99,7 +97,6 @@ public class Ser {
         this.pericias = pericias;
         this.fugacidade = fugacidade;
         this.habilidades = habilidades;
-        this.arcanidades = arcanidades;
         this.tecnicas = tecnicas;
         this.resposta = resposta;
         this.forcaVontade = forcaVontade;
@@ -113,12 +110,11 @@ public class Ser {
         this.elo = elo;
     }
 
-    public Ser(Identidade identidade, Atributos atributos, List<Pericia> pericias, List<Habilidade> habilidades, List<Habilidade> arcanidades, List<Tecnica> tecnicas, List<Modificador> dons, List<Modificador> defeitos, List<Equipamento> itensEquipados, List<Item> posses) {
+    public Ser(Identidade identidade, Atributos atributos, List<Pericia> pericias, List<Habilidade> habilidades, List<Tecnica> tecnicas, List<Modificador> dons, List<Modificador> defeitos, List<Equipamento> itensEquipados, List<Item> posses) {
         this.identidade = identidade;
         this.atributos = atributos;
         this.pericias = pericias;
         this.habilidades = habilidades;
-        this.arcanidades = arcanidades;
         this.tecnicas = tecnicas;
         this.dons = dons;
         this.defeitos = defeitos;
@@ -210,14 +206,6 @@ public class Ser {
 
     public void setHabilidades(List<Habilidade> habilidades) {
         this.habilidades = habilidades;
-    }
-
-    public List<Habilidade> getArcanidades() {
-        return arcanidades;
-    }
-
-    public void setArcanidades(List<Habilidade> arcanidades) {
-        this.arcanidades = arcanidades;
     }
 
     public List<Tecnica> getTecnicas() {
